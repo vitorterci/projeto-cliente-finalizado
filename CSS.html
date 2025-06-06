@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+  <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Master - Do Básico ao Avançado</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+  
+  </head>
+  
+  <body>
+     <!-- Adicione isso logo após a abertura do <body> e antes do <aside> -->
+      <header class="site-header">
+        <div class="header-container">
+          <div class="logo-container">
+            <img src="img/logo.png" alt="Prog. Master Max" class="logo">
+            <span class="site-title">Prog. Master Max</span>
+          </div>
+          <nav class="main-nav">
+            <a href="loading.html?target=index.html" class="nav-link">Início</a>
+            <a href="loading.html?target=HTML.html" class="nav-link">HTML</a>
+            <a href="loading.html?target=CSS.html" class="nav-link active">CSS</a>
+            <a href="loading.html?target=JavaScript.html" class="nav-link">JavaScript</a>
+            <a href="loading.html?target=java.html" class="nav-link">Java</a>
+            <a href="loading.html?target=sobre.html" class="nav-link ">Análise do Código</a>
+          </nav>
+          <div class="header-actions">
+            <a href="login.html" class="nav-link active">Login</a>
+          </div>
+        </div>
+      </header>
+      
+    <aside class="barra-lateral">
+      <button class="botao-flutuante" onclick="window.location.href='loading.html?target=' + document.referrer.split('/').pop() || 'index.html'" title="Voltar">Voltar</button> 
+  
+      <button class="barra-toggle" id="barraToggle">||||||</button>
+      <br>
+      
+      <div class="cartao">
+        <h2>Índice CSS</h2>
+        <ul>
+          <li>Introdução ao CSS</li>
+          <li>Sintaxe e Seletores</li>
+          <li>Box Model</li>
+          <li>Layouts (Flexbox/Grid)</li>
+          <li>Responsividade</li>
+          <li>Animações e Transições</li>
+          <li>Pré-processadores</li>
+          <li>Boas Práticas</li>
+          <li>Projeto Final</li>
+        </ul>
+        <a href="#" class="botao">Baixar Guia</a>
+      </div>
+  
+      <div class="cartao">
+        <h2>Recursos Úteis</h2>
+        <ul>
+          <li>Documentação MDN</li>
+          <li>CSS Tricks</li>
+          <li>Ferramentas de DevTools</li>
+          <li>Validador CSS</li>
+          <li>Cheat Sheets</li>
+        </ul>
+        <a href="#" class="botao">Acessar Links</a>
+      </div>
+  
+      <div class="cartao">
+    <img src="img/html_transparent.png" alt="HTML" class="cartao-icone">
+    <h2>HTML</h2>
+    <ul>
+      <li>O que é HTML?</li>
+      <li>Como funciona?</li>
+      <li>Estrutura básica</li>
+      <li>Principais tags</li>
+      <li>Exemplos de códigos</li>
+    </ul>
+    <a href="HTML.html" class="botao">Acessar HTML</a>
+  </div>
+  
+  <div class="cartao">
+    <img src="img/css_transparent.png" alt="CSS" class="cartao-icone">
+    <h2>CSS</h2>
+    <ul>
+      <li>O que é CSS?</li>
+      <li>Sintaxe básica</li>
+      <li>Formas de aplicação</li>
+      <li>Seletores</li>
+      <li>Box Model</li>
+      <li>Estilos e layouts básicos</li>
+    </ul>
+    <a href="CSS.html" class="botao">Acessar CSS</a>
+  </div>
+  
+  <div class="cartao">
+    <img src="img/js_logo.png" alt="JavaScript" class="cartao-icone">
+    <h2>JAVASCRIPT</h2>
+    <ul>
+      <li>Introdução ao JavaScript</li>
+      <li>Configuração do Ambiente</li>
+      <li>Sintaxe Básica</li>
+      <li>Manipulação do DOM</li>
+      <li>Eventos</li>
+      <li>Funções</li>
+      <li>Objetos e Arrays</li>
+    </ul>
+    <a href="javascript.html" class="botao">Acessar JavaScript</a>
+  </div>
+
+
+  <div class="cartao">
+    <img src="img/java_logo.png" alt="Java" class="cartao-icone">
+    <h2>JAVA</h2>
+    <ul>
+      <li>Introdução ao Java</li>
+      <li>Configuração do Ambiente</li>
+      <li>Sintaxe Básica</li>
+      <li>Estruturas de Controle</li>
+      <li>Orientação a Objetos</li>
+      <li>Coleções e Generics</li>
+      <li>Tratamento de Exceções</li>
+    </ul>
+    <a href="java.html" class="botao">Acessar JAVA</a>
+  </div>
+    </aside>
+    
+    <main class="conteudo-principal">
+      <h1>CSS Master - Do Básico ao Avançado</h1>
+  
+      <div class="conteiner-conteudo">
+        <div class="conteudo">
+          <div class="explicacao">
+            <div class="introducao">
+              <h3>Aprenda CSS de forma completa, desde fundamentos até técnicas avançadas</h3>
+              <h3>Domine a linguagem que estiliza a web com exemplos práticos</h3>
+              <h3>Torne-se um desenvolvedor front-end profissional</h3>
+            </div>
+          </div>
+        </div>
+  
+        <div class="conteudo">
+          <img src="img/css_transparent.png" alt="Logo CSS em azul" style="width: 400px; border-radius: 10px;">
+        </div>
+      </div>
+  
+      <section class="explicacao">
+        <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
+          <div>
+            <h2 class="titulo">O que é CSS?</h2>
+            <p>CSS (Cascading Style Sheets) é a linguagem de estilização utilizada para descrever a apresentação de documentos HTML. Enquanto o HTML estrutura o conteúdo, o CSS define como esse conteúdo será exibido.</p>
+            
+            <p><strong>Características principais:</strong></p>
+            <ul>
+              <li><strong>Separação de preocupações:</strong> Conteúdo (HTML) separado da apresentação (CSS)</li>
+              <li><strong>Sistema de cascata:</strong> Estilos são aplicados seguindo regras de prioridade</li>
+              <li><strong>Controle preciso:</strong> Permite ajustar cada aspecto visual de um elemento</li>
+              <li><strong>Evolução constante:</strong> Novos recursos são adicionados regularmente (CSS3)</li>
+            </ul>
+            
+            <p>O CSS trabalha em conjunto com HTML (para estrutura) e JavaScript (para comportamento), formando a base do desenvolvimento web front-end.</p>
+          </div>
+          <img src="img/css_structure.png" alt="Estrutura CSS" style="width: 300px; border-radius: 10px;">
+        </div>
+      </section>
+  
+      <div class="exemplo-css">
+        <!-- Grupo 1 -->
+        <div>
+          <h3>Estrutura básica</h3>
+          <pre><code>
+      seletor {
+        propriedade: valor;
+        outra-propriedade: valor;
+      }
+          </code></pre>
+        </div>
+        
+        <!-- Grupo 2 -->
+        <div>
+          <h3>Exemplo prático</h3>
+          <pre><code>
+      p {
+        color: red;
+        font-size: 18px;
+      }
+      .destaque {
+        background-color: yellow;
+      }
+      #principal {
+        width: 800px;
+      }
+          </code></pre>
+        </div>
+      </div>
+        <div class="secoes" style="margin-top: 20px;">
+          <div class="secao">
+            <h3>Tipos de Seletores</h3>
+            <table>
+              <tr>
+                <th>Seletor</th>
+                <th>Exemplo</th>
+                <th>Descrição</th>
+              </tr>
+              <tr>
+                <td>Seletor de elemento</td>
+                <td><code>p</code></td>
+                <td>Seleciona todos os elementos &lt;p&gt;</td>
+              </tr>
+              <tr>
+                <td>Seletor de classe</td>
+                <td><code>.classe</code></td>
+                <td>Seleciona elementos com class="classe"</td>
+              </tr>
+              <tr>
+                <td>Seletor de ID</td>
+                <td><code>#id</code></td>
+                <td>Seleciona o elemento com id="id"</td>
+              </tr>
+              <tr>
+                <td>Seletor de atributo</td>
+                <td><code>[type="text"]</code></td>
+                <td>Seleciona elementos com atributo específico</td>
+              </tr>
+              <tr>
+                <td>Seletor universal</td>
+                <td><code>*</code></td>
+                <td>Seleciona todos os elementos</td>
+              </tr>
+            </table>
+          </div>
+          
+          <div class="secao">
+            <h3>Combinadores</h3>
+            <table>
+              <tr>
+                <th>Combinador</th>
+                <th>Exemplo</th>
+                <th>Descrição</th>
+              </tr>
+              <tr>
+                <td>Descendente</td>
+                <td><code>div p</code></td>
+                <td>Seleciona todos &lt;p&gt; dentro de &lt;div&gt;</td>
+              </tr>
+              <tr>
+                <td>Filho direto</td>
+                <td><code>div > p</code></td>
+                <td>Seleciona &lt;p&gt; filhos diretos de &lt;div&gt;</td>
+              </tr>
+              <tr>
+                <td>Irmão adjacente</td>
+                <td><code>div + p</code></td>
+                <td>Seleciona &lt;p&gt; imediatamente após &lt;div&gt;</td>
+              </tr>
+              <tr>
+                <td>Irmão geral</td>
+                <td><code>div ~ p</code></td>
+                <td>Seleciona todos &lt;p&gt; que são irmãos de &lt;div&gt;</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        
+        <section>
+          <div class="exemplo-css">
+            <!-- Grupo 1 -->
+            <div>
+              <h3>Pseudo-classes e Pseudo-elementos</h3>
+              <pre><code>
+          /* Pseudo-classes - estado especial do elemento */
+          a:hover {
+            color: blue;
+          }
+          
+          button:active {
+            transform: scale(0.98);
+          }
+          
+          li:nth-child(odd) {
+            background-color: #f2f2f2;
+          }
+          
+          /* Pseudo-elementos - partes específicas do elemento */
+          p::first-letter {
+            font-size: 200%;
+          }
+          
+          ::selection {
+            background-color: yellow;
+          }
+              </code></pre>
+            </div>
+            </div>
+      <section class="explicacao">
+        <h2>Box Model - O Coração do CSS</h2>
+        <p>Todos os elementos HTML são representados como caixas (boxes) que seguem o modelo de caixa CSS.</p>
+        
+        <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
+          <div style="flex: 1; min-width: 300px;">
+            <h3>Componentes do Box Model</h3>
+            <ul>
+              <li><strong>Conteúdo (Content):</strong> Área onde o conteúdo (texto, imagem) é exibido</li>
+              <li><strong>Preenchimento (Padding):</strong> Espaço entre o conteúdo e a borda</li>
+              <li><strong>Borda (Border):</strong> Linha que envolve o padding e conteúdo</li>
+              <li><strong>Margem (Margin):</strong> Espaço externo ao elemento, separando de outros elementos</li>
+            </ul>
+            
+            <h3>Propriedades Relacionadas</h3>
+            <ul>
+              <li><code>width</code> e <code>height</code> - Tamanho do conteúdo</li>
+              <li><code>padding</code> - Espaçamento interno</li>
+              <li><code>border</code> - Borda ao redor do elemento</li>
+              <li><code>margin</code> - Espaçamento externo</li>
+              <li><code>box-sizing</code> - Controla como as dimensões são calculadas</li>
+            </ul>
+          </div>
+          
+          <div style="flex: 1; min-width: 300px;">
+            <img src="img/box-model.png" alt="Diagrama do Box Model CSS" style="width: 60%; border-radius: 10px;">
+          </div>
+        </div>
+        
+        <section>
+          <div class="exemplo-css" style="margin-top: 20px;">
+            <div class="exemplo-css-item">
+              <h3>Exemplo Prático</h3>
+              <pre><code>
+        .caixa {
+          width: 300px;
+          height: 200px;
+          padding: 20px;
+          border: 5px solid #333;
+          margin: 30px;
+          background-color: #f0f0f0;
+        }
+        
+        /* box-sizing: border-box faz com que width inclua padding e border */
+        .caixa-especial {
+          box-sizing: border-box;
+          width: 300px; /* Agora inclui padding e border */
+          padding: 20px;
+          border: 5px solid #333;
+        }
+              </code></pre>
+            </div>
+          </div>
+        </section>
+  
+      <section class="explicacao">
+        <h2>Layouts com Flexbox e Grid</h2>
+        <p>CSS oferece sistemas modernos para criação de layouts complexos e responsivos.</p>
+        
+        <div class="tabs">
+          <div class="tab active" onclick="openTab(event, 'flexbox')">Flexbox</div>
+          <div class="tab" onclick="openTab(event, 'grid')">CSS Grid</div>
+          <div class="tab" onclick="openTab(event, 'comparacao')">Comparação</div>
+        </div>
+        
+        <div id="flexbox" class="tab-content active">
+          <h3>Flexbox - Layout Unidimensional</h3>
+          <p>Ideal para distribuir espaço em uma única dimensão (linha ou coluna).</p>
+          
+          <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 300px;">
+              <h4>Container Flex (Parent)</h4>
+              <pre><code>
+  .container {
+    display: flex;
+    flex-direction: row; /* ou column */
+    justify-content: center; /* alinhamento horizontal */
+    align-items: center; /* alinhamento vertical */
+    flex-wrap: wrap; /* quebra de linha */
+    gap: 10px; /* espaçamento entre itens */
+  }
+              </code></pre>
+            </div>
+            
+            <div style="flex: 1; min-width: 300px;">
+              <h4>Itens Flex (Children)</h4>
+              <pre><code>
+  .item {
+    flex: 1; /* distribuição proporcional */
+    order: 2; /* ordem de exibição */
+    align-self: flex-end; /* alinhamento individual */
+  }
+              </code></pre>
+            </div>
+          </div>
+          
+          <div class="exemplo-css" style="margin-top: 20px;">
+            <h4>Exemplo Completo</h4>
+            <pre><code>
+  /* Cria um menu horizontal centralizado */
+  .menu {
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+    padding: 10px;
+  }
+  
+  .menu-item {
+    color: white;
+    padding: 5px 15px;
+    text-decoration: none;
+  }
+  
+  /* Layout de cartões responsivo */
+  .cartoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .cartao {
+    flex: 1 1 300px; /* Cresce, encolhe, base 300px */
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+  }
+            </code></pre>
+          </div>
+        </div>
+        
+        <div class="tab-content active" id="grid" >
+          <h3>CSS Grid - Layout Bidimensional</h3>
+          <br>
+          <p>Permite criar layouts complexos com linhas e colunas simultaneamente.</p>
+          
+          <div class="exemplo-css"style="display: flex; gap: 20px; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 300px;">
+              <h4>Container Grid (Parent)</h4>
+              <pre><code>
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; /* 3 colunas */
+    grid-template-rows: 100px auto 50px; /* 3 linhas */
+    gap: 15px; /* espaçamento entre células */
+    grid-template-areas:
+      "header header header"
+      "sidebar main aside"
+      "footer footer footer";
+  }
+              </code></pre>
+            </div>
+            
+            <div style="flex: 1; min-width: 300px;">
+              <h4>Itens Grid (Children)</h4>
+              <pre><code>
+  .item {
+    grid-column: 1 / 3; /* ocupa da linha 1 a 3 */
+    grid-row: 1; /* ocupa apenas linha 1 */
+    grid-area: header; /* posiciona na área definida */
+  }
+              </code></pre>
+            </div>
+          </div>
+          
+          <div class="exemplo-css" style="margin-top: 20px;">
+            <h4>Exemplo Completo</h4>
+            <pre><code>
+  /* Layout de página completo */
+  .page {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 80px 1fr 60px;
+    grid-template-areas:
+      "cabecalho cabecalho"
+      "navegacao conteudo"
+      "rodape rodape";
+    min-height: 100vh;
+  }
+  
+  header { grid-area: cabecalho; }
+  nav { grid-area: navegacao; }
+  main { grid-area: conteudo; }
+  footer { grid-area: rodape; }
+  
+  /* Galeria de imagens responsiva */
+  .galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 10px;
+  }
+            </code></pre>
+          </div>
+
+        
+        
+        <div id="comparacao" class="tab-content">
+          <h3>Quando usar Flexbox vs Grid</h3>
+          
+          <table>
+            <tr>
+              <th></th>
+              <th>Flexbox</th>
+              <th>CSS Grid</th>
+            </tr>
+            <tr>
+              <td><strong>Dimensão</strong></td>
+              <td>Unidimensional (linha OU coluna)</td>
+              <td>Bidimensional (linhas E colunas)</td>
+            </tr>
+            <tr>
+              <td><strong>Uso Ideal</strong></td>
+              <td>Componentes pequenos, alinhamento, distribuição de espaço</td>
+              <td>Layouts complexos, estruturas de página completa</td>
+            </tr>
+            <tr>
+              <td><strong>Controle</strong></td>
+              <td>Baseado no conteúdo dos itens</td>
+              <td>Baseado no container</td>
+            </tr>
+            <tr>
+              <td><strong>Compatibilidade</strong></td>
+              <td>Excelente (IE10+ com prefixos)</td>
+              <td>Boa (IE11 com prefixos, suporte parcial)</td>
+            </tr>
+          </table>
+          
+          <div style="margin-top: 20px;">
+            <h4>Dica Profissional:</h4>
+            <p>Use Grid para o layout geral da página e Flexbox para componentes internos. Eles trabalham muito bem juntos!</p>
+          </div>
+        </div>
+      </section>
+  
+      <section class="explicacao">
+        <h2>Design Responsivo</h2>
+        <p>Criar sites que se adaptam a diferentes tamanhos de tela é essencial no desenvolvimento web moderno.</p>
+        
+        <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+          <div style="flex: 1; min-width: 300px;">
+            <h3>Viewport Meta Tag</h3>
+            <p>Fundamental para dispositivos móveis:</p>
+            <pre><code>
+  &lt;meta name="viewport" 
+        content="width=device-width, initial-scale=1.0"&gt;
+            </code></pre>
+            
+            <h3>Media Queries</h3>
+            <p>Aplica estilos condicionais baseados nas características do dispositivo:</p>
+            <pre><code>
+  /* Estilos para telas menores que 768px */
+  @media (max-width: 768px) {
+    .menu { flex-direction: column; }
+    .sidebar { display: none; }
+  }
+            </code></pre>
+          </div>
+          
+          <div style="flex: 1; min-width: 300px;">
+            <h3>Unidades Relativas</h3>
+            <p>Prefira unidades que se adaptam ao contexto:</p>
+            <ul>
+              <li><code>%</code> - Relativo ao elemento pai</li>
+              <li><code>rem</code> - Relativo ao tamanho da fonte raiz</li>
+              <li><code>em</code> - Relativo ao tamanho da fonte do elemento</li>
+              <li><code>vw/vh</code> - Relativo à largura/altura da viewport</li>
+              <li><code>fr</code> - Unidade fracional do Grid</li>
+            </ul>
+          </div>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <section>
+          <div class="exemplo-css" style="margin-top: 20px;">
+            <div class="exemplo-css-item">
+              <h3>Exemplo Completo de Layout Responsivo</h3>
+              <pre><code>
+        /* Estilos base (mobile first) */
+        .container {
+          padding: 10px;
+        }
+        
+        .header {
+          font-size: 1.5rem;
+        }
+        
+        /* Telas médias (tablets) */
+        @media (min-width: 600px) {
+          .container {
+            padding: 20px;
+          }
+          
+          .main-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 20px;
+          }
+        }
+        
+        /* Telas grandes (desktops) */
+        @media (min-width: 1024px) {
+          .container {
+            max-width: 1200px;
+            margin: 0 auto;
+          }
+          
+          .header {
+            font-size: 2rem;
+          }
+        }
+              </code></pre>
+            </div>
+          </div>
+        </section>
+      </section>
+      <div class="cartao" style="margin-top: 20px;">
+          <h3 class="titulo">Técnicas Avançadas</h3>
+          
+          <div class="conteiner-conteudo">
+              <!-- Exemplo CSS -->
+              <div class="exemplo-css" style="flex: 1;">
+                  <h4>Imagens Responsivas</h4>
+                  <pre><code>
+      img {
+          max-width: 100%;
+          height: auto;
+      }
+      
+      /* Picture element para art direction */
+      &lt;picture&gt;
+          &lt;source media="(min-width: 800px)" srcset="large.jpg"&gt;
+          &lt;source media="(min-width: 400px)" srcset="medium.jpg"&gt;
+          &lt;img src="small.jpg" alt="Descrição"&gt;
+      &lt;/picture&gt;
+                  </code></pre>
+              </div>
+              
+              <!-- Seção Mobile-First -->
+              <div class="conteudo" style="flex: 1;">
+                  <h4>Mobile-First vs Desktop-First</h4>
+                  <ul>
+                      <li><strong>Mobile-First:</strong> Comece com estilos para mobile e adicione media queries com <code>min-width</code></li>
+                      <li><strong>Desktop-First:</strong> Comece com estilos para desktop e adicione media queries com <code>max-width</code></li>
+                  </ul>
+                  <p>Mobile-First é geralmente recomendado devido ao aumento do acesso por dispositivos móveis.</p>
+              </div>
+          </div>
+      </div>
+      </section>
+      <section class="explicacao">
+        <h2>Animações e Transições</h2>
+        <p>CSS oferece poderosas ferramentas para criar movimentos e efeitos visuais sem JavaScript.</p>
+        
+        <div class="tabs">
+          <div class="tab active" onclick="openTab(event, 'transicoes')">Transições</div>
+          <div class="tab" onclick="openTab(event, 'animacoes')">Animações</div>
+          <div class="tab" onclick="openTab(event, 'transformacoes')">Transformações</div>
+        </div>
+        
+        <div id="transicoes" class="tab-content active">
+          <h3>Transições CSS</h3>
+          <p>Permitem mudanças suaves entre estados de um elemento.</p>
+          
+          <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 300px;">
+              <h4>Propriedades</h4>
+              <ul>
+                <li><code>transition-property</code> - Qual propriedade animar</li>
+                <li><code>transition-duration</code> - Tempo da transição</li>
+                <li><code>transition-timing-function</code> - Curva de aceleração</li>
+                <li><code>transition-delay</code> - Atraso antes de iniciar</li>
+                <li><code>transition</code> - Shorthand para todas acima</li>
+              </ul>
+            </div>
+            
+            <div style="flex: 1; min-width: 300px;">
+              <h4>Exemplo Prático</h4>
+              <pre><code>
+  .botao {
+    background-color: blue;
+    transition: background-color 0.3s ease;
+  }
+  
+  .botao:hover {
+    background-color: darkblue;
+  }
+  
+  /* Múltiplas transições */
+  .caixa {
+    transition: width 0.5s ease-out, 
+                height 0.5s ease-out 0.1s;
+  }
+              </code></pre>
+            </div>
+          </div>
+        </div>
+        
+        <div id="animacoes" class="tab-content">
+          <h3>Animações CSS</h3>
+          <p>Permitem criar sequências complexas de animação com keyframes.</p>
+          
+          <div div class="exemplo-css" style="display: flex; gap: 20px; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 300px;">
+              <h4>Definindo Keyframes</h4>
+              <pre><code>
+  @keyframes exemplo {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+              </code></pre>
+            </div>
+            
+            <div  class="exemplo-css" style="flex: 1; min-width: 300px;">
+              <h4>Aplicando a Animação</h4>
+              <pre><code>
+  .elemento {
+    animation-name: exemplo;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-delay: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    
+    /* Shorthand */
+    animation: exemplo 1s ease-out 0.5s 
+    infinite alternate forwards;
+  }
+              </code></pre>
+            </div>
+          </div>
+          
+          <div class="exemplo-css" style="margin-top: 10px;">
+            <h4>Exemplo Completo</h4>
+            <pre><code>
+  /* Pulsação para chamar atenção */
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+  
+  .destaque {
+    animation: pulse 2s infinite;
+  }
+  
+  /* Loading spinner */
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  
+  .spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    border-top-color: blue;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+  }
+            </code></pre>
+          </div>
+        </div>
+        
+        <div id="transformacoes" class="tab-content">
+          <h3>Transformações CSS</h3>
+          <p>Permitem modificar a forma, posição e tamanho de elementos.</p>
+          
+          <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 300px;">
+              <h4>Funções de Transformação</h4>
+              <ul>
+                <li><code>translate()</code> - Move o elemento</li>
+                <li><code>rotate()</code> - Rotaciona o elemento</li>
+                <li><code>scale()</code> - Aumenta/diminui o elemento</li>
+                <li><code>skew()</code> - Inclina o elemento</li>
+                <li><code>matrix()</code> - Combina todas em uma matriz</li>
+              </ul>
+              
+              <h4>Propriedades Relacionadas</h4>
+              <ul>
+                <li><code>transform-origin</code> - Ponto de origem da transformação</li>
+                <li><code>perspective</code> - Profundidade para efeitos 3D</li>
+                <li><code>backface-visibility</code> - Visibilidade do verso em 3D</li>
+              </ul>
+            </div>
+            
+            <div class="exemplo-css" style="flex: 1; min-width: 300px;">
+              <h4>Exemplos Práticos</h4>
+              <pre><code>
+  /* Movimento simples */
+  .elemento:hover {
+    transform: translateX(10px);
+  }
+  
+  /* Rotação 3D */
+  .carta {
+    transform: rotateY(180deg);
+    transition: transform 0.6s;
+  }
+  
+  /* Efeito de zoom */
+  .imagem:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Combinação de transformações */
+  .botao-ativo {
+    transform: rotate(5deg) scale(1.05);
+  }
+              </code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <section class="explicacao">
+        <h2>Pré-processadores CSS</h2>
+        <p>Ferramentas que estendem o CSS com funcionalidades avançadas como variáveis, mixins e aninhamento.</p>
+        
+        <div class="tabs">
+          <div class="tab active" onclick="openTab(event, 'sass')">SASS/SCSS</div>
+          <div class="tab" onclick="openTab(event, 'less')">LESS</div>
+          <div class="tab" onclick="openTab(event, 'postcss')">PostCSS</div>
+        </div>
+        
+        <div id="sass" class="tab-content active">
+          <h3>SASS/SCSS - O Pré-processador Mais Popular</h3>
+          
+          <div class="exemplo-css" style="display: flex; gap: 20px; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 300px;">
+              <h4>Variáveis</h4>
+              <pre><code>
+  $cor-primaria: #3498db;
+  $espacamento: 1rem;
+  
+  .header {
+    background-color: $cor-primaria;
+    padding: $espacamento;
+  }
+              </code></pre>
+              
+              <h4>Mixins</h4>
+              <pre><code>
+  @mixin sombra($x, $y, $blur, $cor) {
+    box-shadow: $x $y $blur $cor;
+    -webkit-box-shadow: $x $y $blur $cor;
+  }
+  
+  .caixa {
+    @include sombra(2px, 2px, 5px, rgba(0,0,0,0.3));
+  }
+              </code></pre>
+            </div>
+            
+            <div style="flex: 1; min-width: 300px;">
+              <h4>Aninhamento</h4>
+              <pre><code>
+  nav {
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      
+      li {
+        display: inline-block;
+        
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+              </code></pre>
+              
+              <h4>Herança</h4>
+              <pre><code>
+  %mensagem {
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  .sucesso {
+    @extend %mensagem;
+    border-color: green;
+  }
+              </code></pre>
+            </div>
+          </div>
+        </div>
+        
+        <div id="less" class="tab-content active">
+          <h3>LESS - Alternativa Simples</h3>
+          
+          <div class="exemplo-css" style="display: flex; gap: 20px; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 300px;">
+              <h4>Variáveis</h4>
+              <pre><code>
+                @cor-primaria: #3498db;
+                @espacamento: 1rem;
+                
+                .header {
+                  background-color: @cor-primaria;
+                  padding: @espacamento;
+                }
+                      </code></pre>
+                      
+                      <h4>Mixins</h4>
+                      <pre><code>
+                .sombra(@x, @y, @blur, @cor) {
+                  box-shadow: @x @y @blur @cor;
+                  -webkit-box-shadow: @x @y @blur @cor;
+                }
+                
+                .caixa {
+                  .sombra(2px, 2px, 5px, rgba(0,0,0,0.3));
+                }
+                      </code></pre>
+                    </div>
+                    
+                    <div style="flex: 1; min-width: 300px;">
+                      <h4>Operações</h4>
+                      <pre><code>
+                @base: 5%;
+                @filler: @base * 2;
+                @other: @base + @filler;
+                
+                .caixa {
+                  width: @base + @filler;
+                }
+                      </code></pre>
+                      
+                      <h4>Funções</h4>
+                      <pre><code>
+                .caixa {
+                  color: lighten(#428bca, 10%);
+                  background-color: darken(#428bca, 10%);
+                }
+                      </code></pre>
+                    </div></div>
+        
+      
+        <div id="postcss" class="tab-content">
+          <h3>PostCSS - Processador Modular</h3>
+          <p>Não é um pré-processador tradicional, mas uma ferramenta para transformar CSS com JavaScript.</p>
+          
+          <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 300px;">
+              <h4>Plugins Populares</h4>
+              <ul>
+                <li><strong>Autoprefixer:</strong> Adiciona vendor prefixes automaticamente</li>
+                <li><strong>CSSNano:</strong> Minificação de CSS</li>
+                <li><strong>PostCSS Preset Env:</strong> Permite usar CSS futuro hoje</li>
+                <li><strong>Stylelint:</strong> Linter para CSS</li>
+              </ul>
+            </div>
+            
+            <div style="flex: 1; min-width: 300px;">
+              <h4>Exemplo de Configuração</h4>
+              <pre><code>
+  // postcss.config.js
+  module.exports = {
+    plugins: [
+      require('autoprefixer'),
+      require('cssnano')({
+        preset: 'default',
+      }),
+      require('postcss-preset-env')({
+        stage: 1,
+        features: {
+          'nesting-rules': true,
+        },
+      }),
+    ],
+  };
+              </code></pre>
+            </div>
+          </div>
+        </div>
+        
+        <div style="margin-top: 20px;">
+          <h3>CSS Nativo vs Pré-processadores</h3>
+          <table>
+            <tr>
+              <th></th>
+              <th>CSS Nativo</th>
+              <th>Pré-processadores</th>
+            </tr>
+            <tr>
+              <td><strong>Variáveis</strong></td>
+              <td>Sim (custom properties)</td>
+              <td>Sim (mais poderosas em SASS/LESS)</td>
+            </tr>
+            <tr>
+              <td><strong>Aninhamento</strong></td>
+              <td>Sim (CSS Nesting - novo)</td>
+              <td>Sim (mais estabelecido)</td>
+            </tr>
+            <tr>
+              <td><strong>Mixins/Funções</strong></td>
+              <td>Não</td>
+              <td>Sim</td>
+            </tr>
+            <tr>
+              <td><strong>Modularização</strong></td>
+              <td>Limitado (@import)</td>
+              <td>Avançado (partials)</td>
+            </tr>
+            <tr>
+              <td><strong>Compilação</strong></td>
+              <td>Não necessária</td>
+              <td>Necessária</td>
+            </tr>
+          </table>
+        </div>
+      </section>
+  <section class="explicacao">
+        <h2>Boas Práticas e Padrões CSS</h2>
+        <p>Escrever CSS de forma organizada e escalável é essencial para projetos profissionais.</p>
+        
+        <div class="secoes">
+          <div class="secao">
+            <h3>1. Metodologias CSS</h3>
+            <ul>
+              <li><strong>BEM (Block, Element, Modifier):</strong> Padroniza nomes de classes para evitar conflitos</li>
+              <li><strong>SMACSS:</strong> Divide o CSS em categorias lógicas (Base, Layout, Module, State, Theme)</li>
+              <li><strong>OOCSS:</strong> Sephera estrutura de aparência e conteúdo de containers</li>
+            </ul>
+          </div>
+          
+          <div class="secao">
+            <h3>2. Organização de Arquivos</h3>
+            <ul>
+              <li>Divida em arquivos separados (reset.css, variables.css, components.css)</li>
+              <li>Use pré-processadores (SASS/LESS) para modularização</li>
+              <li>Adote convenções de nomes consistentes</li>
+            </ul>
+          </div>
+          
+          <div class="secao">
+            <h3>3. Performance CSS</h3>
+            <ul>
+              <li>Evite seletores muito específicos ou aninhamento excessivo</li>
+              <li>Minimize o uso de !important</li>
+              <li>Utilize CSS moderno (Grid, Flexbox) em vez de hacks</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="dica">
+          <p><strong>Dica profissional:</strong> Documente seu CSS com comentários e mantenha um style guide para consistência visual.</p>
+        </div>
+  </section>
+  
+  
+  <section class="explicacao">
+  <section class="conclusao">
+    <h2>Próximos Passos no Aprendizado</h2>
+    <div class="passos">
+      <div class="passo">
+        <h3>1. Praticar Construindo Projetos</h3>
+        <p>Crie clones de sites populares ou desenvolva seus próprios layouts para solidificar o conhecimento.</p>
+      </div>
+      
+      <div class="passo">
+        <h3>2. Explorar Frameworks CSS</h3>
+        <p>Estude Bootstrap, Tailwind CSS ou outros frameworks para entender como eles funcionam internamente.</p>
+      </div>
+      
+      <div class="passo">
+        <h3>3. Aprofundar em CSS Avançado</h3>
+        <p>Explore temas como: Custom Properties, CSS Houdini, Container Queries e Scroll Snap.</p>
+      </div>
+    </div>
+    
+    <div class="recursos-adicionais">
+      <h3>Recursos Recomendados</h3>
+      <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">Documentação MDN CSS</a></li>
+        <li><a href="https://css-tricks.com/" target="_blank">CSS-Tricks</a></li>
+        <li><a href="https://www.w3.org/Style/CSS/" target="_blank">W3C CSS Standards</a></li>
+        <li><a href="https://web.dev/learn/css/" target="_blank">Web.dev Learn CSS</a></li>
+      </ul>
+    </div>
+  </section>
+  </section>
+  <footer class="rodape">
+    <p>© 2025 Java Master - Todos os direitos reservados</p>
+    <p>Desenvolvido com 💜 pelos estudantes de desenvolvimento web (e IA)</p>
+    <div class="redes-sociais">
+    <a href="#"><img src="github-icon.png" alt="GitHub"></a>
+    <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+    <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+    </div>
+    <div>
+      <h4> usado para auxilio</h4>
+      <a href="https://flexboxlabs.netlify.app/"><img src="" alt="Flexbox Labs"></a>
+      <a href="https://chat.deepseek.com/"><img src="" alt="Deepseek"></a>
+    </div>
+    </footer>
+  </main>
+  
+ 
+<button class="theme-toggle" id="theme-toggle">🌓</button>
+
+<script src="script.js"></script>
+  </body>
+  </html>

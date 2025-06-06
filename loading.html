@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carregando | Prog. Master Max</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #2a2a2a;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: 'Open Sans', sans-serif;
+      overflow: hidden;
+    }
+    
+    .loading-container {
+      text-align: center;
+      color: white;
+    }
+    
+    .logo-loading {
+      width: 200px;
+      height: 200px;
+      margin-bottom: 20px;
+      animation: pulse 2s infinite ease-in-out;
+      background: #f4f4f4;
+      border-radius: 20px;
+    }
+    
+    h1 {
+      font-family: 'Cinzel', serif;
+      color: #9b59b6;
+      margin-bottom: 20px;
+    }
+    
+    .progress-container {
+      width: 300px;
+      height: 10px;
+      background-color: #444;
+      border-radius: 5px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+    
+    .progress-bar {
+      height: 100%;
+      width: 0;
+      background-color: #9b59b6;
+      border-radius: 5px;
+      transition: width 0.3s ease;
+    }
+    
+    .loading-text {
+      margin-top: 15px;
+      font-size: 14px;
+      color: #aaa;
+    }
+    
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+    
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="loading-container">
+    <img src="img/logo.png" alt="Prog. Master Max" class="logo-loading" >
+    <h1>Prog. Master Max</h1>
+    <div class="progress-container">
+      <div class="progress-bar" id="progress-bar"></div>
+    </div>
+    <p class="loading-text" id="loading-text">Carregando recursos...</p>
+  </div>
+
+  <script>
+    // Simulação de carregamento
+    const progressBar = document.getElementById('progress-bar');
+    const loadingText = document.getElementById('loading-text');
+    const messages = [
+      "Carregando recursos...",
+      "Preparando conteúdo...",
+      "Organizando materiais...",
+      "Quase pronto...",
+      "Ajustando detalhes...",
+      "Carregando recursos...",
+      "Quase pronto...",
+      "Por que estou aqui...",
+      "Por que escolhi...",
+      "Como a site foi feito?...",
+      "Com um desenvolvedor junior (deepseek)",
+      "tá pronto pode ir"
+    ];
+    
+    // Obter a página de destino da URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const targetPage = urlParams.get('target') || 'index.html';
+    
+    let progress = 0;
+    const interval = setInterval(() => {
+      progress += Math.random() * 10;
+      if (progress > 120) progress = 120;
+      progressBar.style.width = progress + '%';
+      
+      // Mudar mensagem conforme o progresso
+      if (progress < 10) {
+        loadingText.textContent = messages[0];
+      } else if (progress < 20) {
+        loadingText.textContent = messages[1];
+      } else if (progress < 30) {
+        loadingText.textContent = messages[2];
+      } else if (progress < 40) {
+        loadingText.textContent = messages[3];
+      } else if (progress < 50) {
+        loadingText.textContent = messages[4];
+      } else if (progress < 60) {
+        loadingText.textContent = messages[5];
+      } else if (progress < 70) {
+        loadingText.textContent = messages[6];
+      } else if (progress < 80) {
+        loadingText.textContent = messages[7];
+      } else if (progress < 90) {
+        loadingText.textContent = messages[8];
+      } else if (progress < 100) {
+        loadingText.textContent = messages[9];
+      } else if (progress < 110) {
+        loadingText.textContent = messages[10];
+      } else {
+        loadingText.textContent = messages[11];
+      }
+      
+      // Quando chegar a 100%, redirecionar para a página de destino
+      if (progress >= 120) {
+        clearInterval(interval);
+        setTimeout(() => {
+          window.location.href = targetPage;
+        }, 500);
+      }
+    }, 300);
+  </script>
+</body>
+</html>

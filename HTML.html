@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Master - Do Básico ao Avançado</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Adicione isso logo após a abertura do <body> e antes do <aside> -->
+    <header class="site-header">
+      <div class="header-container">
+        <div class="logo-container">
+          <img src="img/logo.png" alt="Prog. Master Max" class="logo">
+          <span class="site-title">Prog. Master Max</span>
+        </div>
+        <nav class="main-nav">
+          <a href="loading.html?target=index.html" class="nav-link ">Início</a>
+          <a href="loading.html?target=HTML.html" class="nav-link active">HTML</a>
+          <a href="loading.html?target=CSS.html" class="nav-link">CSS</a>
+          <a href="loading.html?target=JavaScript.html" class="nav-link">JavaScript</a>
+          <a href="loading.html?target=java.html" class="nav-link">Java</a>
+          <a href="loading.html?target=sobre.html" class="nav-link ">Análise do Código</a>
+        </nav>
+        <div class="header-actions">
+          <a href="login.html" class="nav-link active">Login</a>
+        </div>
+      </div>
+    </header>
+    
+  <aside class="barra-lateral">
+    <button class="botao-flutuante" onclick="window.location.href='loading.html?target=' + document.referrer.split('/').pop() || 'index.html'" title="Voltar">Voltar</button>
+
+    <button class="barra-toggle" id="barraToggle">||||||</button>
+    <br>
+    
+    <div class="cartao">
+      <h2>Índice HTML</h2>
+      <ul>
+        <li>Introdução ao HTML</li>
+        <li>Estrutura Básica</li>
+        <li>Tags Fundamentais</li>
+        <li>Formulários HTML</li>
+        <li>Tabelas e Listas</li>
+        <li>Multimídia e Embed</li>
+        <li>HTML Semântico</li>
+        <li>Práticas Recomendadas</li>
+        <li>Projeto Final</li>
+      </ul>
+      <a href="#" class="botao">Baixar Guia</a>
+    </div>
+
+    <div class="cartao">
+      <h2>Recursos Úteis</h2>
+      <ul>
+        <li>Documentação Oficial</li>
+        <li>Editores de Código</li>
+        <li>Ferramentas de Debug</li>
+        <li>Validador HTML</li>
+        <li>Cheat Sheets</li>
+      </ul>
+      <a href="#" class="botao">Acessar Links</a>
+    </div>
+  
+
+    <div class="cartao">
+  <img src="img/html_transparent.png" alt="HTML" class="cartao-icone">
+  <h2>HTML</h2>
+  <ul>
+    <li>O que é HTML?</li>
+    <li>Como funciona?</li>
+    <li>Estrutura básica</li>
+    <li>Principais tags</li>
+    <li>Exemplos de códigos</li>
+  </ul>
+  <a href="HTML.html" class="botao">Acessar HTML</a>
+</div>
+
+<div class="cartao">
+  <img src="img/css_transparent.png" alt="CSS" class="cartao-icone">
+  <h2>CSS</h2>
+  <ul>
+    <li>O que é CSS?</li>
+    <li>Sintaxe básica</li>
+    <li>Formas de aplicação</li>
+    <li>Seletores</li>
+    <li>Box Model</li>
+    <li>Estilos e layouts básicos</li>
+  </ul>
+  <a href="CSS.html" class="botao">Acessar CSS</a>
+</div>
+
+<div class="cartao">
+  <img src="img/js_logo.png" alt="JavaScript" class="cartao-icone">
+  <h2>JAVASCRIPT</h2>
+  <ul>
+    <li>Introdução ao JavaScript</li>
+    <li>Configuração do Ambiente</li>
+    <li>Sintaxe Básica</li>
+    <li>Manipulação do DOM</li>
+    <li>Eventos</li>
+    <li>Funções</li>
+    <li>Objetos e Arrays</li>
+  </ul>
+  <a href="javascript.html" class="botao">Acessar JavaScript</a>
+</div>
+
+
+<div class="cartao">
+  <img src="img/java_logo.png" alt="Java" class="cartao-icone">
+  <h2>JAVA</h2>
+  <ul>
+    <li>Introdução ao Java</li>
+    <li>Configuração do Ambiente</li>
+    <li>Sintaxe Básica</li>
+    <li>Estruturas de Controle</li>
+    <li>Orientação a Objetos</li>
+    <li>Coleções e Generics</li>
+    <li>Tratamento de Exceções</li>
+  </ul>
+  <a href="java.html" class="botao">Acessar JAVA</a>
+</div>
+
+
+  </aside>
+  
+  <main class="conteudo-principal">
+    <h1>HTML Master - Do Zero ao Avançado</h1>
+
+    <div class="conteiner-conteudo">
+      <div class="conteudo">
+        <div class="explicacao">
+          <div class="introducao">
+            <h3>Aprenda HTML de forma completa, desde os fundamentos até técnicas avançadas</h3>
+            <h3>Domine a linguagem que estrutura a web com exemplos práticos e projetos reais</h3>
+            <h3>Desenvolvido para quem quer se tornar um desenvolvedor web profissional</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="conteudo">
+        <img src="img/html_transparent.png" alt="Logo HTML em roxo" style="width: 400px; border-radius: 10px;">
+      </div>
+    </div>
+
+    <section class="explicacao">
+      <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
+        <div>
+          <h2 class="titulo">O que é HTML?</h2>
+          <p>HTML (HyperText Markup Language) é a linguagem fundamental para construção de páginas web.br É a base de todos os sites que você acessa na internet.</p>
+          
+          <p><strong>Características principais:</strong></p>
+          <ul>
+            <li><strong>Linguagem de marcação:</strong> Não é uma linguagem de programação, mas sim de marcação de conteúdo</li>
+            <li><strong>Baseado em tags:</strong> Utiliza elementos delimitados por tags para estruturar o conteúdo</li>
+            <li><strong>Padronizado pelo W3C:</strong> Garante compatibilidade entre navegadores e dispositivos</li>
+            <li><strong>Evolução constante:</strong> Atualmente na versão HTML5, com novos elementos semânticos e APIs</li>
+          </ul>
+          
+          <p>O HTML trabalha em conjunto com CSS (para estilização) e JavaScript (para interatividade), formando a tríade fundamental do desenvolvimento web front-end.</p>
+        </div>
+        <img src="img/html_structure.png" alt="Estrutura HTML" style="width: 300px; border-radius: 10px;">
+      </div>
+    </section>
+
+    <section class="explicacao">
+      <h2>Estrutura Básica de um Documento HTML</h2>
+      <p>Todos os documentos HTML seguem uma estrutura básica que serve como ponto de partida para qualquer página web.</p>
+      
+      <p><strong>Componentes essenciais:</strong></p>
+      <ol>
+        <li><code>&lt;!DOCTYPE html&gt;</code> - Declaração do tipo de documento (HTML5)</li>
+        <li><code>&lt;html&gt;</code> - Elemento raiz que envolve todo o documento</li>
+        <li><code>&lt;head&gt;</code> - Contém metadados, links para recursos e título da página</li>
+        <li><code>&lt;body&gt;</code> - Contém todo o conteúdo visível da página</li>
+      </ol>
+
+      <p><strong>Exemplo completo:</strong></p>
+      <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-BR"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Minha Primeira Página&lt;/title&gt;
+  &lt;link rel="stylesheet" href="estilos.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;header&gt;
+    &lt;h1&gt;Bem-vindo ao Meu Site&lt;/h1&gt;
+  &lt;/header&gt;
+  &lt;main&gt;
+    &lt;section&gt;
+      &lt;h2&gt;Sobre&lt;/h2&gt;
+      &lt;p&gt;Este é um parágrafo de exemplo.&lt;/p&gt;
+    &lt;/section&gt;
+  &lt;/main&gt;
+  &lt;footer&gt;
+    &lt;p&gt;© 2023 Meu Site&lt;/p&gt;
+  &lt;/footer&gt;
+  &lt;script src="scripts.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+      </code></pre>
+      
+      <div class="secoes">
+        <div class="secao">
+          <h3>Metadados importantes</h3>
+          <ul>
+            <li><code>&lt;meta charset="UTF-8"&gt;</code> - Define a codificação de caracteres</li>
+            <li><code>&lt;meta name="viewport"&gt;</code> - Configura a visualização em dispositivos móveis</li>
+            <li><code>&lt;title&gt;</code> - Define o título que aparece na aba do navegador</li>
+            <li><code>&lt;link&gt;</code> - Para vincular folhas de estilo externas</li>
+          </ul>
+        </div>
+        
+        <div class="secao">
+          <h3>Boas práticas</h3>
+          <ul>
+            <li>Sempre declarar o DOCTYPE</li>
+            <li>Definir o atributo lang</li>
+            <li>Usar UTF-8 para suporte a caracteres especiais</li>
+            <li>Incluir a meta tag viewport para responsividade</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="explicacao">
+      <h2>Tags HTML Fundamentais</h2>
+      <p>O HTML possui uma variedade de tags que servem para diferentes propósitos na estruturação do conteúdo.</p>
+      
+      <div class="tabs">
+        <div class="tab active" onclick="openTab(event, 'texto')">Texto</div>
+        <div class="tab" onclick="openTab(event, 'multimidia')">Multimídia</div>
+        <div class="tab" onclick="openTab(event, 'estrutura')">Estrutura</div>
+      </div>
+      
+      <div id="texto" class="tab-content active">
+        <h3>Tags para formatação de texto</h3>
+        <table>
+          <tr>
+            <th>Tag</th>
+            <th>Descrição</th>
+            <th>Exemplo</th>
+          </tr>
+          <tr>
+            <td><code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code></td>
+            <td>Cabeçalhos/títulos</td>
+            <td><code>&lt;h1&gt;Título Principal&lt;/h1&gt;</code></td>
+          </tr>
+          <tr>
+            <td><code>&lt;p&gt;</code></td>
+            <td>Parágrafo</td>
+            <td><code>&lt;p&gt;Texto do parágrafo.&lt;/p&gt;</code></td>
+          </tr>
+          <tr>
+            <td><code>&lt;a&gt;</code></td>
+            <td>Link</td>
+            <td><code>&lt;a href="url"&gt;Link&lt;/a&gt;</code></td>
+          </tr>
+          <tr>
+            <td><code>&lt;strong&gt;</code></td>
+            <td>Texto importante (negrito)</td>
+            <td><code>&lt;strong&gt;Importante&lt;/strong&gt;</code></td>
+          </tr>
+          <tr>
+            <td><code>&lt;em&gt;</code></td>
+            <td>Texto enfatizado (itálico)</td>
+            <td><code>&lt;em&gt;Ênfase&lt;/em&gt;</code></td>
+          </tr>
+        </table>
+      </div>
+      
+      <div id="multimidia" class="tab-content">
+        <h3>Tags para multimídia</h3>
+        <table>
+          <tr>
+            <th>Tag</th>
+            <th>Descrição</th>
+            <th>Exemplo</th>
+          </tr>
+          <tr>
+            <td><code>&lt;img&gt;</code></td>
+            <td>Imagem</td>
+            <td><code>&lt;img src="imagem.jpg" alt="Descrição"&gt;</code></td>
+          </tr>
+          <tr>
+            <td><code>&lt;video&gt;</code></td>
+            <td>Vídeo</td>
+            <td><code>&lt;video src="video.mp4" controls&gt;&lt;/video&gt;</code></td>
+          </tr>
+          <tr>
+            <td><code>&lt;audio&gt;</code></td>
+            <td>Áudio</td>
+            <td><code>&lt;audio src="audio.mp3" controls&gt;&lt;/audio&gt;</code></td>
+          </tr>
+          <tr>
+            <td><code>&lt;iframe&gt;</code></td>
+            <td>Incorporar conteúdo externo</td>
+            <td><code>&lt;iframe src="outra-pagina.html"&gt;&lt;/iframe&gt;</code></td>
+          </tr>
+        </table>
+      </div>
+      
+      <div id="estrutura" class="tab-content">
+        <h3>Tags para estruturação</h3>
+        <table>
+          <tr>
+            <th>Tag</th>
+            <th>Descrição</th>
+            <th>Exemplo</th>
+          </tr>
+          <tr>
+            <td><code>&lt;div&gt;</code></td>
+            <td>Container genérico</td>
+            <td><code>&lt;div class="container"&gt;&lt;/div&gt;</code></td>
+          </tr>
+          <tr>
+            <td><code>&lt;span&gt;</code></td>
+            <td>Container inline genérico</td>
+            <td><code>&lt;span class="destaque"&gt;&lt;/span&gt;</code></td>
+          </tr>
+          <tr>
+            <td><code>&lt;header&gt;</code></td>
+            <td>Cabeçalho da página ou seção</td>
+            <td><code>&lt;header&gt;Logo e navegação&lt;/header&gt;</code></td>
+          </tr>
+          <tr>
+            <td><code>&lt;footer&gt;</code></td>
+            <td>Rodapé da página ou seção</td>
+            <td><code>&lt;footer&gt;Informações de contato&lt;/footer&gt;</code></td>
+          </tr>
+          <tr>
+            <td><code>&lt;section&gt;</code></td>
+            <td>Seção temática do documento</td>
+            <td><code>&lt;section&gt;Conteúdo relacionado&lt;/section&gt;</code></td>
+          </tr>
+        </table>
+      </div>
+      </section>
+
+    <section class="explicacao">
+      <h2>Formulários HTML</h2>
+      <p>Formulários são essenciais para coletar informações dos usuários e interagir com eles.</p>
+      
+      <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+        <div style="flex: 1; min-width: 300px;">
+          <h3>Estrutura básica</h3>
+          <pre><code>
+&lt;form action="/processar" method="POST"&gt;
+  &lt;div class="form-group"&gt;
+    &lt;label for="nome"&gt;Nome:&lt;/label&gt;
+    &lt;input type="text" id="nome" name="nome" required&gt;
+  &lt;/div&gt;
+  
+  &lt;div class="form-group"&gt;
+    &lt;label for="email"&gt;Email:&lt;/label&gt;
+    &lt;input type="email" id="email" name="email" required&gt;
+  &lt;/div&gt;
+  
+  &lt;div class="form-group"&gt;
+    &lt;label for="senha"&gt;Senha:&lt;/label&gt;
+    &lt;input type="password" id="senha" name="senha" required&gt;
+  &lt;/div&gt;
+  
+  &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+&lt;/form&gt;
+          </code></pre>
+        </div>
+        
+        <div style="flex: 1; min-width: 300px;">
+          <h3>Elementos de formulário</h3>
+          <ul>
+            <li><code>&lt;input&gt;</code> - Campo de entrada (vários tipos: text, email, password, etc.)</li>
+            <li><code>&lt;textarea&gt;</code> - Área de texto multilinha</li>
+            <li><code>&lt;select&gt;</code> - Lista suspensa</li>
+            <li><code>&lt;button&gt;</code> - Botão</li>
+            <li><code>&lt;label&gt;</code> - Rótulo para campos</li>
+            <li><code>&lt;fieldset&gt;</code> - Agrupa elementos relacionados</li>
+            <li><code>&lt;legend&gt;</code> - Título para fieldset</li>
+          </ul>
+          
+          <h3>Atributos importantes</h3>
+          <ul>
+            <li><code>required</code> - Campo obrigatório</li>
+            <li><code>placeholder</code> - Texto de exemplo</li>
+            <li><code>pattern</code> - Expressão regular para validação</li>
+            <li><code>autocomplete</code> - Sugestões de preenchimento</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="explicacao">
+      <h2>Tabelas e Listas</h2>
+      <p>HTML oferece elementos específicos para organizar dados em tabelas e criar listas ordenadas ou não ordenadas.</p>
+      
+      <div class="secoes">
+        <div class="secao">
+          <h3>Tabelas</h3>
+          <pre><code>
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Nome&lt;/th&gt;
+      &lt;th&gt;Idade&lt;/th&gt;
+      &lt;th&gt;Cidade&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;João&lt;/td&gt;
+      &lt;td&gt;25&lt;/td&gt;
+      &lt;td&gt;São Paulo&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Maria&lt;/td&gt;
+      &lt;td&gt;30&lt;/td&gt;
+      &lt;td&gt;Rio de Janeiro&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+          </code></pre>
+          
+          <p><strong>Elementos de tabela:</strong></p>
+          <ul>
+            <li><code>&lt;table&gt;</code> - Define a tabela</li>
+            <li><code>&lt;thead&gt;</code> - Cabeçalho da tabela</li>
+            <li><code>&lt;tbody&gt;</code> - Corpo da tabela</li>
+            <li><code>&lt;tfoot&gt;</code> - Rodapé da tabela</li>
+            <li><code>&lt;tr&gt;</code> - Linha da tabela</li>
+            <li><code>&lt;th&gt;</code> - Célula de cabeçalho</li>
+            <li><code>&lt;td&gt;</code> - Célula de dados</li>
+          </ul>
+        </div>
+        
+        <div class="secao">
+          <h3>Listas</h3>
+          <pre><code>
+&lt;!-- Lista não ordenada --&gt;
+&lt;ul&gt;
+  &lt;li&gt;Item 1&lt;/li&gt;
+  &lt;li&gt;Item 2&lt;/li&gt;
+  &lt;li&gt;Item 3&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- Lista ordenada --&gt;
+&lt;ol&gt;
+  &lt;li&gt;Primeiro passo&lt;/li&gt;
+  &lt;li&gt;Segundo passo&lt;/li&gt;
+  &lt;li&gt;Terceiro passo&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;!-- Lista de definição --&gt;
+&lt;dl&gt;
+  &lt;dt&gt;HTML&lt;/dt&gt;
+  &lt;dd&gt;Linguagem de marcação para web&lt;/dd&gt;
+  &lt;dt&gt;CSS&lt;/dt&gt;
+  &lt;dd&gt;Linguagem de estilização para web&lt;/dd&gt;
+&lt;/dl&gt;
+          </code></pre>
+          
+          <p><strong>Tipos de listas:</strong></p>
+          <ul>
+            <li><code>&lt;ul&gt;</code> - Lista não ordenada (com marcadores)</li>
+            <li><code>&lt;ol&gt;</code> - Lista ordenada (numerada)</li>
+            <li><code>&lt;dl&gt;</code> - Lista de definição (termo e descrição)</li>
+            <li><code>&lt;li&gt;</code> - Item de lista (para ul e ol)</li>
+            <li><code>&lt;dt&gt;</code> - Termo de definição</li>
+            <li><code>&lt;dd&gt;</code> - Descrição do termo</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="explicacao">
+      <h2>HTML Semântico</h2>
+      <p>HTML5 introduziu elementos semânticos que melhoram a acessibilidade e a organização do código.</p>
+      
+      <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
+        <div style="flex: 1; min-width: 300px;">
+          <h3>Elementos semânticos principais</h3>
+          <ul>
+            <li><code>&lt;header&gt;</code> - Cabeçalho da página ou seção</li>
+            <li><code>&lt;nav&gt;</code> - Navegação principal</li>
+            <li><code>&lt;main&gt;</code> - Conteúdo principal</li>
+            <li><code>&lt;article&gt;</code> - Conteúdo independente</li>
+            <li><code>&lt;section&gt;</code> - Seção temática</li>
+            <li><code>&lt;aside&gt;</code> - Conteúdo relacionado (sidebar)</li>
+            <li><code>&lt;footer&gt;</code> - Rodapé da página ou seção</li>
+            <li><code>&lt;figure&gt;</code> e <code>&lt;figcaption&gt;</code> - Imagem com legenda</li>
+            <li><code>&lt;time&gt;</code> - Representação de data/hora</li>
+          </ul>
+          
+          <h3>Vantagens</h3>
+          <ul>
+            <li>Melhor acessibilidade para leitores de tela</li>
+            <li>Otimização para motores de busca (SEO)</li>
+            <li>Código mais legível e organizado</li>
+            <li>Facilita a estilização com CSS</li>
+          </ul>
+        </div>
+      
+        <div style="flex: 1; min-width: 300px;">
+          <br>
+          <img src="img/html_structure.png" alt="Estrutura semântica HTML5" style="width: 85%; border-radius: 10px;">
+        </div>
+      </div>
+      
+      <h3 style="margin-top: 20px;">Exemplo de estrutura semântica</h3>
+      <pre><code>
+&lt;body&gt;
+  &lt;header&gt;
+    &lt;h1&gt;Meu Site Semântico&lt;/h1&gt;
+    &lt;nav&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Sobre&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+  &lt;/header&gt;
+  
+  &lt;main&gt;
+    &lt;article&gt;
+      &lt;h2&gt;Título do Artigo&lt;/h2&gt;
+      &lt;p&gt;Conteúdo do artigo...&lt;/p&gt;
+    &lt;/article&gt;
+    
+    &lt;aside&gt;
+      &lt;h3&gt;Links Relacionados&lt;/h3&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Link 1&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/aside&gt;
+  &lt;/main&gt;
+  
+  &lt;footer&gt;
+    &lt;p&gt;© 2023 Meu Site&lt;/p&gt;
+  &lt;/footer&gt;
+&lt;/body&gt;
+      </code></pre>
+    </section>
+
+    <section class="explicacao">
+      <h2>Práticas Recomendadas</h2>
+      <p>Seguir boas práticas no HTML resulta em código mais limpo, acessível e de melhor desempenho.</p>
+      
+      <div class="secoes">
+        <div class="secao">
+          <h3>Organização do Código</h3>
+          <ul>
+            <li>Use indentação consistente (2 ou 4 espaços)</li>
+            <li>Comente seções complexas</li>
+            <li>Agrupe elementos relacionados</li>
+            <li>Mantenha a hierarquia de cabeçalhos (h1 > h2 > h3)</li>
+            <li>Separe estrutura (HTML), apresentação (CSS) e comportamento (JS)</li>
+          </ul>
+        </div>
+        
+        <div class="secao">
+          <h3>Acessibilidade</h3>
+          <ul>
+            <li>Sempre use <code>alt</code> em imagens</li>
+            <li>Use ARIA attributes quando necessário</li>
+            <li>Garanta contraste adequado de cores</li>
+            <li>Teste com leitores de tela</li>
+            <li>Use landmarks semânticos (header, nav, main, etc.)</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="secoes" style="margin-top: 20px;">
+        <div class="secao">
+          <h3>SEO Básico</h3>
+          <ul>
+            <li>Use <code>&lt;title&gt;</code> descritivo e único</li>
+            <li>Meta description relevante</li>
+            <li>URLs amigáveis</li>
+            <li>Hierarquia semântica de cabeçalhos</li>
+            <li>Imagens otimizadas com alt text</li>
+          </ul>
+        </div>
+        
+        <div class="secao">
+          <h3>Performance</h3>
+          <ul>
+            <li>Minimize o uso de elementos desnecessários</li>
+            <li>Adie carregamento de scripts não críticos</li>
+            <li>Use lazy loading para imagens</li>
+            <li>Prefira CSS para efeitos visuais</li>
+            <li>Valide seu HTML regularmente</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="explicacao">
+      <h2>Projeto Prático: Criando um Site Completo</h2>
+      <p>Vamos colocar em prática tudo o que aprendemos criando um site pessoal simples.</p>
+      
+      <h3>Estrutura do Projeto</h3>
+      <pre><code>
+meu-site/
+├── index.html
+├── sobre.html
+├── contato.html
+├── css/
+│   └── estilo.css
+├── js/
+│   └── scripts.js
+└── imagens/
+    ├── logo.png
+    └── foto-perfil.jpg
+      </code></pre>
+      
+      <h3>Código do index.html</h3>
+      <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-BR"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Meu Site Pessoal&lt;/title&gt;
+  &lt;link rel="stylesheet" href="css/estilo.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;header&gt;
+    &lt;nav&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="sobre.html"&gt;Sobre&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="contato.html"&gt;Contato&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+  &lt;/header&gt;
+  
+  &lt;main&gt;
+    &lt;section id="banner"&gt;
+      &lt;h1&gt;Bem-vindo ao Meu Site&lt;/h1&gt;
+      &lt;p&gt;Este é um site pessoal criado com HTML semântico.&lt;/p&gt;
+    &lt;/section&gt;
+    
+    &lt;section id="portfolio"&gt;
+      &lt;h2&gt;Meu Portfólio&lt;/h2&gt;
+      &lt;div class="projetos"&gt;
+        &lt;article class="projeto"&gt;
+          &lt;h3&gt;Projeto 1&lt;/h3&gt;
+          &lt;p&gt;Descrição do projeto...&lt;/p&gt;
+        &lt;/article&gt;
+        &lt;!-- Mais projetos --&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+  &lt;/main&gt;
+  
+  &lt;footer&gt;
+    &lt;p&gt;&copy; 2023 Meu Site Pessoal&lt;/p&gt;
+  &lt;/footer&gt;
+  
+  &lt;script src="js/scripts.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+      </code></pre>
+      
+      <h3>Desafios Adicionais</h3>
+      <ul>
+        <li>Crie a página "sobre.html" com sua biografia</li>
+        <li>Desenvolva um formulário de contato funcional</li>
+        <li>Adicione um portfólio com seus projetos</li>
+        <li>Implemente um tema dark/light toggle</li>
+        <li>Torne o site responsivo para mobile</li>
+      </ul>
+      
+      <a href="#" class="botao">Baixar Código Completo</a>
+    </section>
+
+    <section class="explicacao">
+      <h2>Próximos Passos no Aprendizado</h2>
+      <p>Depois de dominar o HTML, você está pronto para avançar para outras tecnologias web.</p>
+      
+      <div class="secoes">
+        <div class="secao">
+          <h3>CSS - Estilização</h3>
+          <ul>
+            <li>Seletores e propriedades CSS</li>
+            <li>Layouts com Flexbox e Grid</li>
+            <li>Animações e transições</li>
+            <li>Design responsivo</li>
+            <li>Pré-processadores (SASS/LESS)</li>
+          </ul>
+        </div>
+        
+        <div class="secao">
+          <h3>JavaScript - Interatividade</h3>
+          <ul>
+            <li>Manipulação do DOM</li>
+            <li>Eventos e listeners</li>
+            <li>Requisições AJAX/Fetch</li>
+            <li>ES6+ (modern JavaScript)</li>
+            <li>Frameworks como React, Vue ou Angular</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="secoes" style="margin-top: 20px;">
+        <div class="secao">
+          <h3>Backend - Lógica do Servidor</h3>
+          <ul>
+            <li>Node.js e Express</li>
+            <li>Bancos de dados (SQL e NoSQL)</li>
+            <li>APIs RESTful</li>
+            <li>Autenticação e segurança</li>
+            <li>Deploy e hospedagem</li>
+          </ul>
+        </div>
+        
+        <div class="secao">
+          <h3>Ferramentas Profissionais</h3>
+          <ul>
+            <li>Git e controle de versão</li>
+            <li>Pacotes e dependências (npm/yarn)</li>
+            <li>Bundlers (Webpack, Vite)</li>
+            <li>Testes automatizados</li>
+            <li>CI/CD pipelines</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    
+    <footer class="rodape">
+      <p>© 2025 Java Master - Todos os direitos reservados</p>
+      <p>Desenvolvido com 💜 pelos estudantes de desenvolvimento web (e IA)</p>
+      <div class="redes-sociais">
+      <a href="#"><img src="github-icon.png" alt="GitHub"></a>
+      <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+      <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+      </div>
+      <div>
+        <h4> usado para auxilio</h4>
+        <a href="https://flexboxlabs.netlify.app/"><img src="" alt="Flexbox Labs"></a>
+        <a href="https://chat.deepseek.com/"><img src="" alt="Deepseek"></a>
+      </div>
+      </footer>
+  </main>
+
+  
+<button class="theme-toggle" id="theme-toggle">🌓</button>
+
+<script src="script.js"></script>
+</body>
+</html>

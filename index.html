@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prog. Master Max</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+ 
+ 
+</head>
+
+<body>
+  <!-- Adicione isso logo após a abertura do <body> e antes do <aside> -->
+    <header class="site-header">
+      <div class="header-container">
+        <div class="logo-container">
+          <img src="img/logo.png" alt="Prog. Master Max" class="logo">
+          <span class="site-title">Prog. Master Max</span>
+        </div>
+        <nav class="main-nav">
+          <a href="loading.html?target=index.html" class="nav-link active">Início</a>
+          <a href="loading.html?target=HTML.html" class="nav-link">HTML</a>
+          <a href="loading.html?target=CSS.html" class="nav-link">CSS</a>
+          <a href="loading.html?target=JavaScript.html" class="nav-link">JavaScript</a>
+          <a href="loading.html?target=java.html" class="nav-link">Java</a>
+          <a href="loading.html?target=sobre.html" class="nav-link">Análise do Código</a>
+        </nav>
+        <div class="header-actions">
+          <a href="login.html" class="nav-link active">Login</a>
+        </div>
+      </div>
+    </header>
+    
+  <aside class="barra-lateral">
+    <button class="botao-flutuante" onclick="window.location.href='loading.html?target=' + document.referrer.split('/').pop() || 'index.html'" title="Voltar">Voltar</button>
+
+    <button class="barra-toggle" id="barraToggle">||||||</button>
+    <br><br>
+    
+
+
+    <div class="cartao">
+  <img src="img/html_transparent.png" alt="HTML" class="cartao-icone">
+  <h2>HTML</h2>
+  <ul>
+    <li>O que é HTML?</li>
+    <li>Como funciona?</li>
+    <li>Estrutura básica</li>
+    <li>Principais tags</li>
+    <li>Exemplos de códigos</li>
+  </ul>
+  <a href="HTML.html" class="botao">Acessar HTML</a>
+</div>
+
+<div class="cartao">
+  <img src="img/css_transparent.png" alt="CSS" class="cartao-icone">
+  <h2>CSS</h2>
+  <ul>
+    <li>O que é CSS?</li>
+    <li>Sintaxe básica</li>
+    <li>Formas de aplicação</li>
+    <li>Seletores</li>
+    <li>Box Model</li>
+    <li>Estilos e layouts básicos</li>
+  </ul>
+  <a href="CSS.html" class="botao">Acessar CSS</a>
+</div>
+
+<div class="cartao">
+  <img src="img/js_logo.png" alt="JavaScript" class="cartao-icone">
+  <h2>JAVASCRIPT</h2>
+  <ul>
+    <li>Introdução ao JavaScript</li>
+    <li>Configuração do Ambiente</li>
+    <li>Sintaxe Básica</li>
+    <li>Manipulação do DOM</li>
+    <li>Eventos</li>
+    <li>Funções</li>
+    <li>Objetos e Arrays</li>
+  </ul>
+  <a href="javascript.html" class="botao">Acessar JavaScript</a>
+</div>
+
+
+
+<div class="cartao">
+  <img src="img/java_logo.png" alt="Java" class="cartao-icone">
+  <h2>JAVA</h2>
+  <ul>
+    <li>Introdução ao Java</li>
+    <li>Configuração do Ambiente</li>
+    <li>Sintaxe Básica</li>
+    <li>Estruturas de Controle</li>
+    <li>Orientação a Objetos</li>
+    <li>Coleções e Generics</li>
+    <li>Tratamento de Exceções</li>
+  </ul>
+  <a href="java.html" class="botao">Acessar JAVA</a>
+</div>
+  </aside>
+  
+    <main class="conteudo-principal">
+
+     
+  
+      <h1>Prog. Master Max</h1>
+  
+      <div class="conteiner-conteudo">
+        <div class="conteudo">
+          <div class="explicacao">
+            <div class="introducao">
+              <h3>Domine os fundamentos da web de forma prática e eficiente</h3>
+              <h3>Aprenda HTML e CSS do zero com explicações claras, exemplos interativos e projetos reais</h3>
+              <h3>Desenvolvido para iniciantes que querem construir uma base sólida no desenvolvimento web</h3>
+            </div>
+          </div>
+        </div>
+  
+        <div class="conteudo">
+          <img src="img/html_transparent.png" alt="Logo HTML em roxo" style="width: 200px; border-radius: 20px; margin: 10px;">
+          <img src="img/css_transparent.png" alt="Logo CSS em roxo" style="width: 200px; border-radius: 20px; margin: 10px;">
+          <img src="img/js_logo.png" alt="Logo CSS em roxo" style="width: 200px; border-radius: 20px; margin: 10px;">
+          <img src="img/java_logo.png" alt="Logo java em roxo" style="width: 200px; border-radius: 20px; margin: 10px;">
+        </div>
+      </div>
+  
+      <section class="explicacao">
+        <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
+          <div>
+            <h2 class="titulo">O que é HTML?</h2>
+            <p>HTML (HyperText Markup Language) é a linguagem fundamental para construção de páginas web. É como o esqueleto de um site - define a estrutura e organização do conteúdo.</p>
+            
+            <p><strong>Principais características:</strong></p>
+            <ul>
+              <li>Não é uma linguagem de programação, mas sim de marcação</li>
+              <li>Utiliza um sistema de tags para estruturar o conteúdo</li>
+              <li>Trabalha em conjunto com CSS (aparência) e JavaScript (comportamento)</li>
+              <li>Padronizado pelo W3C, garantindo compatibilidade entre navegadores</li>
+            </ul>
+            
+            <p>Todo documento HTML é composto por elementos que formam uma hierarquia, criando a árvore DOM (Document Object Model).</p>
+          </div>
+          <img src="img/html_transparent.png" alt="Logo HTML em roxo" style="width: 120px; border-radius: 10px;">
+        </div>
+      </section>
+  
+      <section class="explicacao">
+        <h2>Como funciona o HTML?</h2>
+        <p>O HTML funciona através de um sistema de elementos aninhados, onde cada tag tem uma função específica:</p>
+        
+        <p><strong>Estrutura básica de um documento HTML:</strong></p>
+        <ol>
+          <li><code>&lt;!DOCTYPE html&gt;</code> - Define a versão do HTML (HTML5)</li>
+          <li><code>&lt;html&gt;</code> - Elemento raiz que envolve todo o documento</li>
+          <li><code>&lt;head&gt;</code> - Contém metadados e links para recursos externos</li>
+          <li><code>&lt;body&gt;</code> - Contém todo o conteúdo visível da página</li>
+        </ol>
+  
+        <p><strong>Exemplo completo:</strong></p>
+        
+        <pre><code>
+  &lt;!DOCTYPE html&gt;
+  &lt;html lang="pt-BR"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Minha Primeira Página&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;header&gt;
+      &lt;h1&gt;Bem-vindo ao Meu Site&lt;/h1&gt;
+    &lt;/header&gt;
+    &lt;main&gt;
+      &lt;section&gt;
+        &lt;h2&gt;Sobre&lt;/h2&gt;
+        &lt;p&gt;Este é um parágrafo de exemplo.&lt;/p&gt;
+      &lt;/section&gt;
+    &lt;/main&gt;
+    &lt;footer&gt;
+      &lt;p&gt;© 2023 Meu Site&lt;/p&gt;
+    &lt;/footer&gt;
+  &lt;/body&gt;
+  &lt;/html&gt;
+        </code></pre>
+      </section>
+  
+      <section class="explicacao">
+        <h2>Sintaxe básica do HTML</h2>
+        <p>O HTML possui regras claras de sintaxe que garantem que os navegadores possam interpretar corretamente o conteúdo:</p>
+        
+        <div class="secoes">
+          <div class="secao">
+            <h3>Elementos HTML</h3>
+            <ul>
+              <li>Compõem a estrutura da página</li>
+              <li>Geralmente compostos por tag de abertura e fechamento</li>
+              <li>Exemplo: <code>&lt;p&gt;Texto&lt;/p&gt;</code></li>
+              <li>Alguns elementos são auto-fecháveis: <code>&lt;img&gt;</code>, <code>&lt;br&gt;</code></li>
+            </ul>
+          </div>
+          
+          <div class="secao">
+            <h3>Atributos HTML</h3>
+            <ul>
+              <li>Fornecem informações adicionais sobre elementos</li>
+              <li>Sempre especificados na tag de abertura</li>
+              <li>Formato: <code>nome="valor"</code></li>
+              <li>Exemplos comuns: <code>id</code>, <code>class</code>, <code>href</code>, <code>src</code></li>
+            </ul>
+          </div>
+        </div>
+        
+        <p><strong>Hierarquia:</strong> Os elementos HTML formam uma estrutura aninhada (parent-child), onde alguns elementos podem conter outros elementos.</p>
+      </section>
+  
+      <section class="explicacao">
+        <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
+          <div>
+            <h2 class="titulo">O que é CSS?</h2>
+            <p>CSS (Cascading Style Sheets) é a linguagem que controla a apresentação visual das páginas web. Se o HTML é o esqueleto, o CSS é a pele e as roupas - define cores, layouts, tipografia e efeitos visuais.</p>
+            
+            <p><strong>Principais características:</strong></p>
+            <ul>
+              <li>Separa o conteúdo (HTML) da apresentação (CSS)</li>
+              <li>Sistema de cascata e especificidade determina quais estilos são aplicados</li>
+              <li>Permite designs responsivos que se adaptam a diferentes dispositivos</li>
+              <li>Suporte a animações e transições complexas</li>
+            </ul>
+            
+            <p>O CSS3 (versão atual) introduziu recursos avançados como flexbox, grid, variáveis e muito mais.</p>
+          </div>
+          <img src="img/css_transparent.png" alt="Logo CSS em roxo" style="width: 120px; border-radius: 10px;">
+        </div>
+      </section>
+  
+      <section class="explicacao">
+        <h2>Como funciona o CSS?</h2>
+        <p>O CSS aplica estilos aos elementos HTML através de um sistema de seletores e propriedades:</p>
+        
+        <p><strong>Três métodos de aplicação:</strong></p>
+        <ol>
+          <li><strong>Inline:</strong> Estilos diretamente no elemento (menos recomendado)</li>
+          <li><strong>Interno:</strong> Bloco <code>&lt;style&gt;</code> no cabeçalho do documento</li>
+          <li><strong>Externo:</strong> Arquivo .css separado (melhor prática)</li>
+        </ol>
+        
+        <p><strong>Exemplo de CSS externo (estilos.css):</strong></p>
+        <pre><code>
+  /* Reset básico */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Estilizando o corpo do documento */
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    padding: 20px;
+  }
+  
+  /* Estilizando cabeçalhos */
+  h1 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilizando links */
+  a {
+    color: #3498db;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Classe utilitária */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+        </code></pre>
+        
+        <p>Para vincular um arquivo CSS externo, use no <code>&lt;head&gt;</code> do HTML:</p>
+        <pre><code>
+  &lt;link rel="stylesheet" href="estilos.css"&gt;
+        </code></pre>
+      </section>
+  
+      <section class="explicacao">
+        <h2>Sintaxe básica do CSS</h2>
+        <p>A sintaxe do CSS é composta por regras que combinam seletores e declarações:</p>
+        
+        <div class="secoes">
+          <div class="secao">
+            <h3>Componentes de uma regra CSS</h3>
+            <ul>
+              <li><strong>Seletor:</strong> Identifica o(s) elemento(s) HTML a estilizar</li>
+              <li><strong>Bloco de declaração:</strong> Entre chaves {}</li>
+              <li><strong>Propriedade:</strong> Característica a ser alterada (ex: color)</li>
+              <li><strong>Valor:</strong> Configuração da propriedade (ex: red)</li>
+            </ul>
+            <pre><code>
+  seletor {
+    propriedade: valor;
+    outra-propriedade: valor;
+  }
+            </code></pre>
+          </div>
+          
+          <div class="secao">
+            <h3>Tipos de seletores</h3>
+            <ul>
+              <li><strong>Elemento:</strong> <code>p</code>, <code>h1</code>, <code>div</code></li>
+              <li><strong>Classe:</strong> <code>.destaque</code> (usa atributo class)</li>
+              <li><strong>ID:</strong> <code>#menu</code> (usa atributo id)</li>
+              <li><strong>Atributo:</strong> <code>[type="text"]</code></li>
+              <li><strong>Pseudo-classes:</strong> <code>:hover</code>, <code>:nth-child()</code></li>
+            </ul>
+          </div>
+        </div>
+        
+        <p><strong>Exemplo prático combinando conceitos:</strong></p>
+        <pre><code>
+  /* Seletor de elemento com pseudo-classe */
+  button:hover {
+    background-color: #4CAF50; /* Verde */
+    transform: scale(1.05);   /* Efeito de zoom */
+    transition: all 0.3s ease; /* Animação suave */
+  }
+  
+  /* Seletor de classe com múltiplas propriedades */
+  .card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin: 10px;
+  }
+  
+  /* Seletor de ID com posicionamento */
+  #header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+        </code></pre>
+      </section>
+  
+      <section class="explicacao">
+        <h2>Box Model: O fundamento do layout CSS</h2>
+        <p>Todos os elementos HTML são representados como caixas retangulares pelo CSS. O Box Model descreve como essas caixas são compostas:</p>
+        
+        <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
+          <div>
+            <p><strong>Componentes do Box Model:</strong></p>
+            <ol>
+              <li><strong>Conteúdo:</strong> Área onde texto e imagens aparecem</li>
+              <li><strong>Padding:</strong> Espaço interno entre conteúdo e borda</li>
+              <li><strong>Border:</strong> Linha que envolve padding e conteúdo</li>
+              <li><strong>Margin:</strong> Espaço externo além da borda</li>
+            </ol>
+            
+            <p>O tamanho total de um elemento é calculado como:<br>
+            <code>largura total = margin-left + border-left + padding-left + width + padding-right + border-right + margin-right</code></p>
+          </div>
+          <img src="img/box-model.png" alt="Diagrama do Box Model CSS" style="width: 200px;">
+        </div>
+        
+        <p><strong>Exemplo de controle do Box Model:</strong></p>
+        <pre><code>
+  .caixa {
+    width: 300px;          /* Largura do conteúdo */
+    padding: 20px;         /* Espaçamento interno */
+    border: 2px solid #333; /* Borda */
+    margin: 30px;          /* Espaçamento externo */
+    background-color: #f8f8f8;
+  }
+  
+  /* Box-sizing moderno (recomendado) */
+  * {
+    box-sizing: border-box; /* Padding e border incluídos na width/height */
+  }
+        </code></pre>
+      </section>
+      
+      <section class="explicacao">
+        <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
+          <div>
+            <h2 class="titulo">O que é Java?</h2>
+            <p>Java é uma linguagem de programação orientada a objetos, robusta e multiplataforma. É uma das linguagens mais populares do mundo, usada em diversos tipos de aplicações.</p>
+            
+            <p><strong>Principais características:</strong></p>
+            <ul>
+              <li>Linguagem compilada e interpretada (compila para bytecode que roda na JVM)</li>
+              <li>Orientada a objetos (classes, objetos, herança, polimorfismo)</li>
+              <li>Multiplataforma ("Write Once, Run Anywhere")</li>
+              <li>Gerenciamento automático de memória (coletor de lixo)</li>
+              <li>Rica biblioteca padrão (Java SE API)</li>
+            </ul>
+            
+            <p>Java é amplamente utilizado em aplicações empresariais, Android, sistemas embarcados e grandes sistemas distribuídos.</p>
+          </div>
+          <img src="img/java_logo.png" alt="Logo Java" style="width: 120px; border-radius: 10px;">
+        </div>
+      </section>
+      
+      <section class="explicacao">
+        <h2>Como funciona o Java?</h2>
+        <p>O Java possui uma arquitetura única que permite a portabilidade entre diferentes sistemas operacionais:</p>
+        
+        <p><strong>Processo de execução Java:</strong></p>
+        <ol>
+          <li>Você escreve o código fonte (.java)</li>
+          <li>O compilador Java (javac) transforma em bytecode (.class)</li>
+          <li>A JVM (Java Virtual Machine) interpreta o bytecode</li>
+          <li>O código é executado na plataforma específica</li>
+        </ol>
+      
+        <p><strong>Exemplo de um programa Java simples:</strong></p>
+        <pre><code>
+        public class OlaMundo {
+            public static void main(String[] args) {
+                System.out.println("Olá, Mundo!");
+            }
+        }
+        </code></pre>
+      
+        <p>Para executar este programa:
+        <ol>
+          <li>Salve como OlaMundo.java</li>
+          <li>Compile com: <code>javac OlaMundo.java</code></li>
+          <li>Execute com: <code>java OlaMundo</code></li>
+        </ol>
+        </p>
+      </section>
+      
+      <section class="explicacao">
+        <h2>Sintaxe básica do Java</h2>
+        <p>Java possui uma sintaxe bem definida, derivada do C/C++, mas com mais estrutura e regras:</p>
+        
+        <div class="secoes">
+          <div class="secao">
+            <h3>Estrutura de uma classe</h3>
+            <ul>
+              <li>Tudo em Java está dentro de classes</li>
+              <li>O nome do arquivo deve corresponder ao nome da classe pública</li>
+              <li>O método main é o ponto de entrada do programa</li>
+              <li>Exemplo:
+                <pre><code>
+        public class MinhaClasse {
+            // Atributos
+            // Métodos
+        }
+                </code></pre>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="secao">
+            <h3>Tipos de dados e variáveis</h3>
+            <ul>
+              <li>Tipos primitivos: int, double, boolean, char, etc.</li>
+              <li>Objetos: String, Arrays, classes personalizadas</li>
+              <li>Declaração: <code>tipo nomeVariavel = valor;</code></li>
+              <li>Exemplos:
+                <pre><code>
+        int idade = 25;
+        String nome = "João";
+        double altura = 1.75;
+        boolean ativo = true;
+                </code></pre>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <p><strong>Princípios OO:</strong> Java é estritamente orientado a objetos (exceto pelos tipos primitivos), com suporte a encapsulamento, herança e polimorfismo.</p>
+      </section>
+
+
+      <footer class="rodape">
+        <p>© 2025 Java Master - Todos os direitos reservados</p>
+        <p>Desenvolvido com 💜 pelos estudantes de desenvolvimento web (é IA)</p>
+        <div class="redes-sociais">
+        <a href="#"><img src="github-icon.png" alt="GitHub"></a>
+        <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+        <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+        </div>
+        <div>
+          <h4> usado para auxilio</h4>
+          <a href="https://flexboxlabs.netlify.app/"><img src="" alt="Flexbox Labs"></a>
+          <a href="https://chat.deepseek.com/"><img src="" alt="Deepseek"></a>
+        </div>
+        </footer>
+    </main>
+
+    
+<button class="theme-toggle" id="theme-toggle">🌓</button>
+
+<script src="script.js"></script>
+
+    
+  </body>
+  </html>

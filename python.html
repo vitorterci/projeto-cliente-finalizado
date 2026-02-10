@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Python Master - Do Básico ao Avançado</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="site-header">
+      <div class="header-container">
+        <div class="logo-container">
+          <img src="img/logo.png" alt="Prog. Master Max" class="logo">
+          <span class="site-title">Prog. Master Max</span>
+        </div>
+        <nav class="main-nav">
+          <a href="loading.html?target=index.html" class="nav-link">Início</a>
+          <a href="loading.html?target=HTML.html" class="nav-link">HTML</a>
+          <a href="loading.html?target=CSS.html" class="nav-link">CSS</a>
+          <a href="loading.html?target=JavaScript.html" class="nav-link">JavaScript</a>
+          <a href="loading.html?target=java.html" class="nav-link">Java</a>
+          <a href="loading.html?target=python.html" class="nav-link active">Python</a>
+          <a href="loading.html?target=sobre.html" class="nav-link">Análise do Código</a>
+        </nav>
+        <div class="header-actions">
+          <a href="login.html" class="nav-link active">Login</a>
+        </div>
+      </div>
+    </header>
+    
+  <aside class="barra-lateral">
+    <button class="botao-flutuante" onclick="window.location.href='loading.html?target=' + document.referrer.split('/').pop() || 'index.html'" title="Voltar">Voltar</button>
+    <button class="barra-toggle" id="barraToggle">||||||</button>
+    
+    <div class="cartao">
+      <h2>Índice Python</h2>
+      <ul>
+        <li>Introdução ao Python</li>
+        <li>Configuração do Ambiente</li>
+        <li>Sintaxe Básica</li>
+        <li>Estruturas de Dados</li>
+        <li>Funções e Módulos</li>
+        <li>Programação Orientada a Objetos</li>
+        <li>Bibliotecas Populares</li>
+        <li>Python para Data Science</li>
+        <li>Projeto Final</li>
+      </ul>
+      <a href="#" class="botao">Baixar Guia</a>
+    </div>
+
+    <div class="cartao">
+      <h2>Recursos Úteis</h2>
+      <ul>
+        <li>Documentação Oficial</li>
+        <li>PyPI - Pacotes Python</li>
+        <li>IDEs (PyCharm, VS Code)</li>
+        <li>Comunidade Python Brasil</li>
+        <li>Cheat Sheets</li>
+      </ul>
+      <a href="#" class="botao">Acessar Links</a>
+    </div>
+
+    <div class="cartao">
+      <img src="img/python_logo.png" alt="Python" class="cartao-icone">
+      <h2>PYTHON</h2>
+      <ul>
+        <li>O que é Python?</li>
+        <li>Sintaxe Simples</li>
+        <li>Versatilidade</li>
+        <li>Bibliotecas</li>
+        <li>Comunidade</li>
+      </ul>
+      <a href="python.html" class="botao">Acessar PYTHON</a>
+    </div>
+  </aside>
+  
+  <main class="conteudo-principal">
+    <h1>Python Master - Do Zero ao Avançado</h1>
+
+    <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
+      <div style="flex: 2;">
+        <div class="explicacao">
+          <div>
+            <h3>Aprenda Python de forma prática, desde os primeiros passos até projetos complexos</h3>
+            <h3>Domine a linguagem que lidera o mercado de Data Science e IA</h3>
+            <h3>Desenvolvido para quem busca produtividade e legibilidade no código</h3>
+          </div>
+        </div>
+      </div>
+
+      <div style="flex: 1; text-align: center;">
+        <img src="img/python_logo.png" alt="Logo Python" style="width: 200px;">
+      </div>
+    </div>
+
+    <section class="explicacao">
+      <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
+        <div>
+          <h2 class="titulo">O que é Python?</h2>
+          <p>Python é uma linguagem de programação de alto nível, interpretada, de script, imperativa, orientada a objetos, funcional, de tipagem dinâmica e forte. Foi lançada por Guido van Rossum em 1991.</p>
+          
+          <p><strong>Características principais:</strong></p>
+          <ul>
+            <li><strong>Sintaxe Clara:</strong> Foco na legibilidade do código (usa indentação)</li>
+            <li><strong>Multiparadigma:</strong> Suporta POO, funcional e procedural</li>
+            <li><strong>Baterias Inclusas:</strong> Possui uma vasta biblioteca padrão</li>
+            <li><strong>Interpretada:</strong> O código é executado linha por linha</li>
+            <li><strong>Linguagem Geral:</strong> Usada em web, dados, automação, etc.</li>
+          </ul>
+          
+          <p>Python é hoje uma das linguagens mais amadas e utilizadas no mundo, especialmente em Inteligência Artificial e Ciência de Dados.</p>
+        </div>
+        <img src="img/python_logo.png" alt="Python Ecosystem" style="width: 250px; border-radius: 10px;">
+      </div>
+    </section>
+
+    <section class="explicacao">
+      <h2>Configuração do Ambiente</h2>
+      <p>Configurar o Python é simples e rápido na maioria dos sistemas operacionais.</p>
+      
+      <h3>Passos básicos:</h3>
+      <ol>
+        <li>Baixar o instalador no site oficial (python.org)</li>
+        <li>Marcar a opção "Add Python to PATH" durante a instalação</li>
+        <li>Instalar um editor ou IDE (VS Code, PyCharm, Jupyter)</li>
+        <li>Verificar a instalação via terminal</li>
+      </ol>
+
+      <h3>Verificando a instalação:</h3>
+      <pre><code>python --version
+pip --version</code></pre>
+      
+      <div class="secoes">
+        <div class="secao">
+          <h3>Gerenciamento de Pacotes</h3>
+          <ul>
+            <li><strong>PIP:</strong> O instalador de pacotes padrão</li>
+            <li><strong>PyPI:</strong> Repositório oficial de bibliotecas</li>
+            <li><strong>Ambientes Virtuais:</strong> (venv, conda) para isolar projetos</li>
+          </ul>
+        </div>
+        
+        <div class="secao">
+          <h3>IDEs e Editores</h3>
+          <ul>
+            <li>PyCharm (Profissional)</li>
+            <li>VS Code (Leve e versátil)</li>
+            <li>Jupyter Notebook (Foco em dados)</li>
+            <li>Spyder</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="explicacao">
+      <h2>Primeiro Programa em Python</h2>
+      <p>Python é conhecido por sua simplicidade. Veja o "Hello World":</p>
+      
+      <pre><code>print("Olá, Mundo!")</code></pre>
+      
+      <h3>Exemplo de Função:</h3>
+      <pre><code>def saudacao(nome):
+    return f"Olá, {nome}! Bem-vindo ao Python."
+
+print(saudacao("Desenvolvedor"))</code></pre>
+      
+      <div class="secoes">
+        <div class="secao">
+          <h3>Por que Python?</h3>
+          <ul>
+            <li>Curva de aprendizado suave</li>
+            <li>Menos linhas de código que Java/C++</li>
+            <li>Comunidade gigantesca e ativa</li>
+            <li>Alta demanda no mercado de trabalho</li>
+          </ul>
+        </div>
+        
+        <div class="secao">
+          <h3>Onde é usado?</h3>
+          <ul>
+            <li>Desenvolvimento Web (Django, Flask)</li>
+            <li>Ciência de Dados (Pandas, NumPy)</li>
+            <li>Inteligência Artificial (TensorFlow, PyTorch)</li>
+            <li>Automação e Scripting</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="explicacao">
+      <h2>Sintaxe e Estruturas</h2>
+      <p>Python utiliza a indentação para definir blocos de código, o que torna o código visualmente limpo.</p>
+      
+      <div class="secoes">
+        <div class="secao">
+          <h3>Variáveis e Tipos</h3>
+          <pre><code>nome = "Python"  # String
+idade = 30       # Integer
+altura = 1.75    # Float
+vivo = True      # Boolean</code></pre>
+        </div>
+        <div class="secao">
+          <h3>Estruturas de Dados</h3>
+          <pre><code>lista = [1, 2, 3]    # Mutável
+tupla = (4, 5, 6)    # Imutável
+dicionario = {"a":1} # Chave-valor</code></pre>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

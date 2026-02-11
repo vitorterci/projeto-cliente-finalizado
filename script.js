@@ -109,7 +109,7 @@ window.onclick = function(event) {
     var dropdowns = document.getElementsByClassName("dropdown-content");
     for (var i = 0; i < dropdowns.length; i++) {
       var openDropdown = dropdowns[i];
-      if (openDropdown.style.display === 'block') {
+      if (openDropdown.style.display === 'grid') {
         openDropdown.style.display = 'none';
       }
     }
@@ -124,8 +124,8 @@ document.addEventListener('DOMContentLoaded', function() {
   if (dropdownToggle && dropdownContent) {
     dropdownToggle.addEventListener('click', function(e) {
       e.preventDefault();
-      const isVisible = dropdownContent.style.display === 'block';
-      dropdownContent.style.display = isVisible ? 'none' : 'block';
+      const isVisible = dropdownContent.style.display === 'grid';
+      dropdownContent.style.display = isVisible ? 'none' : 'grid';
     });
   }
 });

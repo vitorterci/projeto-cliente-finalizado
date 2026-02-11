@@ -654,13 +654,20 @@ code {
   display: none;
   position: absolute;
   background-color: #2a2a2a;
-  min-width: 200px;
+  min-width: 450px; /* Aumentado para acomodar 3 colunas */
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1001;
   border-radius: 10px;
   top: 100%;
-  left: 0;
-  padding: 10px 0;
+  left: 50%;
+  transform: translateX(-50%); /* Centraliza o dropdown em relação ao botão */
+  padding: 15px;
+  grid-template-columns: repeat(3, 1fr); /* Define 3 colunas iguais */
+  gap: 5px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: grid; /* Muda de block para grid ao mostrar */
 }
 
 .dropdown-content a {

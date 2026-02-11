@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PHP Master - Do Básico ao Avançado</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="site-header">
+      <div class="header-container">
+        <div class="logo-container">
+          <img src="img/logo.png" alt="Prog. Master Max" class="logo">
+          <span class="site-title">Prog. Master Max</span>
+        </div>
+        <nav class="main-nav">
+          <a href="loading.html?target=index.html" class="nav-link">Início</a>
+          <a href="loading.html?target=HTML.html" class="nav-link">HTML</a>
+          <a href="loading.html?target=CSS.html" class="nav-link">CSS</a>
+          <a href="loading.html?target=JavaScript.html" class="nav-link">JavaScript</a>
+          <a href="loading.html?target=java.html" class="nav-link">Java</a>
+          <a href="loading.html?target=python.html" class="nav-link">Python</a>
+          <a href="loading.html?target=php.html" class="nav-link active">PHP</a>
+          <a href="loading.html?target=sobre.html" class="nav-link">Análise do Código</a>
+        </nav>
+        <div class="header-actions">
+          <a href="login.html" class="nav-link active">Login</a>
+        </div>
+      </div>
+    </header>
+    
+  <aside class="barra-lateral">
+    <button class="botao-flutuante" onclick="window.location.href='loading.html?target=' + document.referrer.split('/').pop() || 'index.html'" title="Voltar">Voltar</button>
+    <button class="barra-toggle" id="barraToggle">||||||</button>
+    
+    <div class="cartao">
+      <h2>Índice PHP</h2>
+      <ul>
+        <li>Introdução ao PHP</li>
+        <li>Configuração do Ambiente</li>
+        <li>Sintaxe Básica</li>
+        <li>Variáveis e Tipos</li>
+        <li>Funções</li>
+        <li>Banco de Dados</li>
+        <li>Frameworks (Laravel, Symfony)</li>
+        <li>Projeto Final</li>
+      </ul>
+      <a href="#" class="botao">Baixar Guia</a>
+    </div>
+
+    <div class="cartao">
+      <h2>Recursos Úteis</h2>
+      <ul>
+        <li>Documentação Oficial</li>
+        <li>XAMPP/LAMP</li>
+        <li>Composer</li>
+        <li>Comunidade PHP</li>
+        <li>Cheat Sheets</li>
+      </ul>
+      <a href="#" class="botao">Acessar Links</a>
+    </div>
+
+    <div class="cartao">
+      <img src="img/php_logo.png" alt="PHP" class="cartao-icone">
+      <h2>PHP</h2>
+      <ul>
+        <li>O que é PHP?</li>
+        <li>Desenvolvimento Web</li>
+        <li>Servidor</li>
+        <li>Comunidade</li>
+        <li>Frameworks</li>
+      </ul>
+      <a href="php.html" class="botao">Acessar PHP</a>
+    </div>
+  </aside>
+  
+  <main class="conteudo-principal">
+    <h1>PHP Master - Do Zero ao Avançado</h1>
+
+    <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
+      <div style="flex: 2;">
+        <div class="explicacao">
+          <div>
+            <h3>Aprenda PHP, a linguagem que alimenta a web</h3>
+            <h3>Desenvolva aplicações web dinâmicas e interativas com facilidade</h3>
+            <h3>Desenvolvido para quem quer criar sites e aplicações web profissionais</h3>
+          </div>
+        </div>
+      </div>
+
+      <div style="flex: 1; text-align: center;">
+        <img src="img/php_logo.png" alt="Logo PHP" style="width: 200px;">
+      </div>
+    </div>
+
+    <section class="explicacao">
+      <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
+        <div>
+          <h2 class="titulo">O que é PHP?</h2>
+          <p>PHP (Hypertext Preprocessor) é uma linguagem de script de servidor de propósito geral, especialmente adequada para desenvolvimento web. Criada por Rasmus Lerdorf em 1995, é uma das linguagens mais usadas na internet.</p>
+          
+          <p><strong>Características principais:</strong></p>
+          <ul>
+            <li><strong>Fácil de Aprender:</strong> Sintaxe simples e direta</li>
+            <li><strong>Lado do Servidor:</strong> Executa no servidor, não no navegador</li>
+            <li><strong>Dinâmico:</strong> Gera conteúdo HTML dinamicamente</li>
+            <li><strong>Integrado com HTML:</strong> Pode ser embutido em HTML</li>
+            <li><strong>Suporte a Banco de Dados:</strong> Integração nativa com MySQL, PostgreSQL, etc.</li>
+          </ul>
+          
+          <p>PHP é usado em WordPress, Drupal, Magento e milhões de sites em todo o mundo.</p>
+        </div>
+        <img src="img/php_logo.png" alt="PHP Ecosystem" style="width: 250px; border-radius: 10px;">
+      </div>
+    </section>
+
+    <section class="explicacao">
+      <h2>Configuração do Ambiente</h2>
+      <p>Para programar em PHP, você precisa de um servidor web, PHP e um editor de texto.</p>
+      
+      <h3>Passos básicos:</h3>
+      <ol>
+        <li>Instalar um servidor local (XAMPP, LAMP ou WAMP)</li>
+        <li>Escolher um editor (VS Code, Sublime Text, PhpStorm)</li>
+        <li>Criar arquivos .php</li>
+        <li>Acessar via navegador</li>
+      </ol>
+
+      <h3>Verificando a instalação:</h3>
+      <pre><code>php --version</code></pre>
+      
+      <div class="secoes">
+        <div class="secao">
+          <h3>Ambientes Locais</h3>
+          <ul>
+            <li><strong>XAMPP:</strong> Windows, Linux, macOS</li>
+            <li><strong>LAMP:</strong> Linux (Apache, MySQL, PHP)</li>
+            <li><strong>WAMP:</strong> Windows (Apache, MySQL, PHP)</li>
+            <li><strong>Laragon:</strong> Windows moderno</li>
+          </ul>
+        </div>
+        
+        <div class="secao">
+          <h3>Editores Recomendados</h3>
+          <ul>
+            <li>Visual Studio Code</li>
+            <li>PhpStorm (JetBrains)</li>
+            <li>Sublime Text</li>
+            <li>Atom</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="explicacao">
+      <h2>Primeiro Programa em PHP</h2>
+      <p>Vamos criar o programa "Hello World" em PHP.</p>
+      
+      <h3>Estrutura básica:</h3>
+      <pre><code>&lt;?php
+    echo "Olá, Mundo!";
+?&gt;</code></pre>
+      
+      <h3>Arquivo HTML com PHP:</h3>
+      <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Meu Primeiro PHP&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;?php
+        echo "Bem-vindo ao PHP!";
+    ?&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      
+      <div class="secoes">
+        <div class="secao">
+          <h3>Sintaxe Básica</h3>
+          <ul>
+            <li><code>&lt;?php ?&gt;</code>: Tags de abertura e fechamento</li>
+            <li><code>echo</code>: Imprime texto</li>
+            <li><code>print</code>: Alternativa a echo</li>
+            <li><code>//</code>: Comentário de linha única</li>
+            <li><code>/* */</code>: Comentário multi-linha</li>
+          </ul>
+        </div>
+        
+        <div class="secao">
+          <h3>Variáveis</h3>
+          <ul>
+            <li>Começam com <code>$</code></li>
+            <li>Tipagem dinâmica</li>
+            <li>Case-sensitive</li>
+            <li>Escopo: global, local, static</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="explicacao">
+      <h2>Variáveis e Tipos de Dados</h2>
+      <p>PHP suporta vários tipos de dados.</p>
+      
+      <pre><code>&lt;?php
+$nome = "João";           // String
+$idade = 25;              // Integer
+$altura = 1.75;           // Float
+$ativo = true;            // Boolean
+$dados = array(1, 2, 3);  // Array
+?&gt;</code></pre>
+    </section>
+
+    <section class="explicacao">
+      <h2>Funções em PHP</h2>
+      <p>Funções permitem reutilizar código.</p>
+      
+      <pre><code>&lt;?php
+function saudacao($nome) {
+    return "Olá, " . $nome . "!";
+}
+
+echo saudacao("Maria");
+?&gt;</code></pre>
+    </section>
+
+    <section class="explicacao">
+      <h2>Trabalhando com Formulários</h2>
+      <p>PHP é perfeito para processar dados de formulários HTML.</p>
+      
+      <pre><code>&lt;?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nome = $_POST["nome"];
+    echo "Bem-vindo, " . htmlspecialchars($nome);
+}
+?&gt;
+
+&lt;form method="post"&gt;
+    &lt;input type="text" name="nome"&gt;
+    &lt;input type="submit"&gt;
+&lt;/form&gt;</code></pre>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

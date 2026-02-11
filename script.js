@@ -102,3 +102,30 @@ document.addEventListener('DOMContentLoaded', function() {
 document.getElementById('barraToggle').addEventListener('click', function() {
     document.querySelector('.barra-lateral').classList.toggle('recolhida');
   });
+
+// Suporte para fechar o dropdown ao clicar fora dele
+window.onclick = function(event) {
+  if (!event.target.matches('.dropdown-toggle')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    for (var i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.style.display === 'block') {
+        openDropdown.style.display = 'none';
+      }
+    }
+  }
+}
+
+// Toggle dropdown no clique (para mobile)
+document.addEventListener('DOMContentLoaded', function() {
+  const dropdownToggle = document.querySelector('.dropdown-toggle');
+  const dropdownContent = document.querySelector('.dropdown-content');
+  
+  if (dropdownToggle && dropdownContent) {
+    dropdownToggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      const isVisible = dropdownContent.style.display === 'block';
+      dropdownContent.style.display = isVisible ? 'none' : 'block';
+    });
+  }
+});

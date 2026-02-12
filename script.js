@@ -1,10 +1,9 @@
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Controle de tema claro/escuro
+    // 1. Controle de tema claro/escuro
     const themeToggle = document.getElementById('theme-toggle');
     const body = document.body;
     
-    // Aplicar tema
     function applyTheme(theme) {
         if (theme === 'dark') {
             body.setAttribute('data-theme', 'dark');
@@ -15,18 +14,14 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    // Verificar preferência de tema
     function checkTheme() {
         const savedTheme = localStorage.getItem('theme');
         const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
         return savedTheme || (prefersDark ? 'dark' : 'light');
     }
     
-    // Aplicar tema inicial
-    const initialTheme = checkTheme();
-    applyTheme(initialTheme);
+    applyTheme(checkTheme());
     
-    // Alternar entre temas
     if (themeToggle) {
         themeToggle.addEventListener('click', function() {
             const currentTheme = body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
@@ -35,73 +30,64 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Função para abrir abas
+    // 2. Lógica de Abas
     function openTab(evt, tabName) {
-        // Esconder todos os conteúdos de tab
         const tabContents = document.getElementsByClassName('tab-content');
-        for (let i = 0; i < tabContents.length; i++) {
-            tabContents[i].classList.remove('active');
-        }
+        for (let content of tabContents) content.classList.remove('active');
 
-        // Desativar todas as tabs
         const tabs = document.getElementsByClassName('tab');
-        for (let i = 0; i < tabs.length; i++) {
-            tabs[i].classList.remove('active');
-        }
+        for (let tab of tabs) tab.classList.remove('active');
 
-        // Mostrar conteúdo da tab atual e ativar a tab
-        document.getElementById(tabName).classList.add('active');
+        const target = document.getElementById(tabName);
+        if (target) target.classList.add('active');
         evt.currentTarget.classList.add('active');
     }
     
-    // Adicionar event listeners para todas as abas
-    const tabs = document.getElementsByClassName('tab');
-    for (let i = 0; i < tabs.length; i++) {
-        tabs[i].addEventListener('click', function(e) {
+    const tabElements = document.getElementsByClassName('tab');
+    for (let tab of tabElements) {
+        tab.addEventListener('click', function(e) {
             const tabName = this.getAttribute('data-tab') || 
-                           this.getAttribute('onclick').match(/'(.*?)'/)[1];
-            openTab(e, tabName);
+                           (this.getAttribute('onclick') ? this.getAttribute('onclick').match(/'(.*?)'/)[1] : null);
+            if (tabName) openTab(e, tabName);
         });
     }
     
-    // Ativar a primeira aba por padrão
-    if (tabs.length > 0) {
-        const firstTab = tabs[0];
+    if (tabElements.length > 0) {
+        const firstTab = tabElements[0];
         const firstTabName = firstTab.getAttribute('data-tab') || 
-                           firstTab.getAttribute('onclick').match(/'(.*?)'/)[1];
-        firstTab.classList.add('active');
-        const firstTabContent = document.getElementById(firstTabName);
-        if (firstTabContent) firstTabContent.classList.add('active');
+                           (firstTab.getAttribute('onclick') ? firstTab.getAttribute('onclick').match(/'(.*?)'/)[1] : null);
+        if (firstTabName) {
+            firstTab.classList.add('active');
+            const firstTabContent = document.getElementById(firstTabName);
+            if (firstTabContent) firstTabContent.classList.add('active');
+        }
     }
-});
 
-// Adicione isso ao seu script.js
-document.addEventListener('DOMContentLoaded', function() {
-    // ... código existente ...
-    
-    // Toggle da barra lateral
+    // 3. Toggle da barra lateral (Consolidado)
     const barraToggle = document.getElementById('barraToggle');
     const barraLateral = document.querySelector('.barra-lateral');
     
     if (barraToggle && barraLateral) {
       barraToggle.addEventListener('click', function() {
-        barraLateral.classList.toggle('expandida');
-        // Atualizar posição do botão
-        if (barraLateral.classList.contains('expandida')) {
-          this.style.left = '305px';
-        } else {
-          this.style.left = '85px';
-        }
+        const isExpanded = barraLateral.classList.toggle('expandida');
+        barraLateral.classList.toggle('recolhida', !isExpanded);
+        this.style.left = isExpanded ? '305px' : '85px';
       });
     }
-    
-    // ... resto do código existente ...
-  });
 
-  // No seu script.js
-document.getElementById('barraToggle').addEventListener('click', function() {
-    document.querySelector('.barra-lateral').classList.toggle('recolhida');
-  });
+    // 4. Lógica do Dropdown
+    const dropdownToggle = document.querySelector('.dropdown-toggle');
+    const dropdownContent = document.querySelector('.dropdown-content');
+    
+    if (dropdownToggle && dropdownContent) {
+      dropdownToggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        const isVisible = dropdownContent.classList.toggle('is-open');
+        dropdownContent.style.display = isVisible ? 'grid' : 'none';
+        dropdownToggle.setAttribute('aria-expanded', isVisible);
+      });
+    }
+});
 
 // Navegação por teclado para o dropdown
 document.addEventListener('keydown', function(e) {
@@ -134,31 +120,17 @@ document.addEventListener('keydown', function(e) {
   }
 });
 
-// Suporte para fechar o dropdown ao clicar fora dele
-window.onclick = function(event) {
+// Fechar dropdown ao clicar fora
+window.addEventListener('click', function(event) {
   if (!event.target.matches('.dropdown-toggle')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    for (var i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.style.display === 'grid') {
+    const dropdowns = document.getElementsByClassName("dropdown-content");
+    for (let openDropdown of dropdowns) {
+      if (openDropdown.classList.contains('is-open')) {
+        openDropdown.classList.remove('is-open');
         openDropdown.style.display = 'none';
+        const toggle = openDropdown.previousElementSibling;
+        if (toggle) toggle.setAttribute('aria-expanded', 'false');
       }
     }
-  }
-}
-
-// Toggle dropdown no clique (para mobile)
-document.addEventListener('DOMContentLoaded', function() {
-  const dropdownToggle = document.querySelector('.dropdown-toggle');
-  const dropdownContent = document.querySelector('.dropdown-content');
-  
-  if (dropdownToggle && dropdownContent) {
-    dropdownToggle.addEventListener('click', function(e) {
-      e.preventDefault();
-      const isVisible = dropdownContent.style.display === 'grid';
-      const newState = !isVisible;
-      dropdownContent.style.display = newState ? 'grid' : 'none';
-      dropdownToggle.setAttribute('aria-expanded', newState);
-    });
   }
 });

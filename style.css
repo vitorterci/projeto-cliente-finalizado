@@ -35,7 +35,7 @@ body {
   padding: 0;
 }
 
-/* Estilos do Header */
+/* Estilos do Header Consolidado */
 .site-header {
   background-color: #2a2a2a;
   color: white;
@@ -44,18 +44,20 @@ body {
   top: 0;
   left: 80px;
   right: 0;
-  height: 70px;
+  height: 80px;
   z-index: 1000;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
 }
 
 .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
   max-width: 1200px;
-  height: 100%;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -102,6 +104,11 @@ body {
 .nav-link:hover {
   background-color: rgba(255, 255, 255, 0.1);
   transform: translateY(-2px);
+}
+
+.nav-link:focus, .botao:focus, .botao-flutuante:focus, .barra-toggle:focus {
+  outline: 3px solid var(--accent-color);
+  outline-offset: 2px;
 }
 
 .nav-link.active {
@@ -169,27 +176,7 @@ body {
   }
 }
 
-/* Adicione isso na seção de Estrutura Principal */
-.site-header {
-  background-color: #2a2a2a ;
-  color: white;
-  padding: 1rem 0;
-  position: fixed;
-  top: 0;
-  left: 80px; /* Igual à largura da barra lateral */
-  right: 0;
-  height: 100px;
-  z-index: 90;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.header-container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+/* Removido bloco duplicado do header */
 
 .site-header h1 {
   font-size: 2rem;
@@ -211,11 +198,11 @@ body {
 
 /* Ajuste o conteúdo principal para descer abaixo do cabeçalho */
 .conteudo-principal {
-  margin-top: 120px; /* Altura do cabeçalho + margem */
+  margin-top: 100px;
   margin-left: 80px;
   padding: 2rem;
   width: calc(100% - 80px);
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .barra-lateral.expandida ~ .conteudo-principal {
@@ -246,8 +233,8 @@ img{
 
 }
 .barra-lateral {
-  width: 80px; /* Barra lateral menor */
-  background: #2a2a2a; /* Cor mais escura */
+  width: 80px;
+  background: #2a2a2a;
   padding: 1rem;
   position: fixed;
   top: 0;
@@ -255,8 +242,8 @@ img{
   overflow-y: auto;
   display: flex;
   flex-direction: column;
-  transition: all 0.3s ease;
-  z-index: 100;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1100; /* Acima do header */
 }
 
 /* Barra lateral expandida */

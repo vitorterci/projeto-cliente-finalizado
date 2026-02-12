@@ -19,20 +19,56 @@
                   <nav class="main-nav">
           <a href="loading.html?target=index.html" class="nav-link">Início</a>
           <div class="dropdown">
-            <a href="#" class="nav-link dropdown-toggle">Linguagens</a>
-            <div class="dropdown-content">
-              <a href="loading.html?target=HTML.html">HTML</a>
-              <a href="loading.html?target=CSS.html">CSS</a>
-              <a href="loading.html?target=JavaScript.html">JavaScript</a>
-              <a href="loading.html?target=java.html">Java</a>
-              <a href="loading.html?target=python.html">Python</a>
-              <a href="loading.html?target=c.html">C</a>
-              <a href="loading.html?target=cpp.html">C++</a>
-              <a href="loading.html?target=csharp.html">C#</a>
-              <a href="loading.html?target=php.html">PHP</a>
-              <a href="loading.html?target=ruby.html">Ruby</a>
-              <a href="loading.html?target=go.html">Go</a>
-              <a href="loading.html?target=swift.html">Swift</a>
+            <a href="#" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">Linguagens</a>
+                        <div class="dropdown-content" role="menu">
+              <div class="dropdown-item" role="none">
+                <img src="img/html_transparent.png" alt="" class="dropdown-icon">
+                <a href="loading.html?target=HTML.html" role="menuitem">HTML</a>
+              </div>
+              <div class="dropdown-item" role="none">
+                <img src="img/css_transparent.png" alt="" class="dropdown-icon">
+                <a href="loading.html?target=CSS.html" role="menuitem">CSS</a>
+              </div>
+              <div class="dropdown-item" role="none">
+                <img src="img/js_logo.png" alt="" class="dropdown-icon">
+                <a href="loading.html?target=JavaScript.html" role="menuitem">JavaScript</a>
+              </div>
+              <div class="dropdown-item" role="none">
+                <img src="img/java_logo.png" alt="" class="dropdown-icon">
+                <a href="loading.html?target=java.html" role="menuitem">Java</a>
+              </div>
+              <div class="dropdown-item" role="none">
+                <img src="img/python_logo.png" alt="" class="dropdown-icon">
+                <a href="loading.html?target=python.html" role="menuitem">Python</a>
+              </div>
+              <div class="dropdown-item" role="none">
+                <img src="img/c_logo.png" alt="" class="dropdown-icon">
+                <a href="loading.html?target=c.html" role="menuitem">C</a>
+              </div>
+              <div class="dropdown-item" role="none">
+                <img src="img/cpp_logo.png" alt="" class="dropdown-icon">
+                <a href="loading.html?target=cpp.html" role="menuitem">C++</a>
+              </div>
+              <div class="dropdown-item" role="none">
+                <img src="img/csharp_logo.png" alt="" class="dropdown-icon">
+                <a href="loading.html?target=csharp.html" role="menuitem">C#</a>
+              </div>
+              <div class="dropdown-item" role="none">
+                <img src="img/php_logo.png" alt="" class="dropdown-icon">
+                <a href="loading.html?target=php.html" role="menuitem">PHP</a>
+              </div>
+              <div class="dropdown-item" role="none">
+                <img src="img/ruby_logo.png" alt="" class="dropdown-icon">
+                <a href="loading.html?target=ruby.html" role="menuitem">Ruby</a>
+              </div>
+              <div class="dropdown-item" role="none">
+                <img src="img/go_logo.png" alt="" class="dropdown-icon">
+                <a href="loading.html?target=go.html" role="menuitem">Go</a>
+              </div>
+              <div class="dropdown-item" role="none">
+                <img src="img/swift_logo.png" alt="" class="dropdown-icon">
+                <a href="loading.html?target=swift.html" role="menuitem">Swift</a>
+              </div>
             </div>
           </div>
           <a href="loading.html?target=sobre.html" class="nav-link">Análise do Código</a>
@@ -44,7 +80,7 @@
       </header>
       
   <aside class="barra-lateral">
-    <button class="botao-flutuante" onclick="window.location.href='loading.html?target=' + document.referrer.split('/').pop() || 'index.html'" title="Voltar">Voltar</button>
+    <button class="botao-flutuante" onclick="window.location.href='loading.html?target=' + document.referrer.split('/').pop() || 'index.html'" title="Voltar"><span class="back-icon">←</span> Voltar</button>
     <button class="barra-toggle" id="barraToggle">||||||</button>
     <br>
     

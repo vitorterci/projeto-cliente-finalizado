@@ -103,6 +103,37 @@ document.getElementById('barraToggle').addEventListener('click', function() {
     document.querySelector('.barra-lateral').classList.toggle('recolhida');
   });
 
+// Navegação por teclado para o dropdown
+document.addEventListener('keydown', function(e) {
+  const dropdown = document.querySelector('.dropdown');
+  const content = document.querySelector('.dropdown-content');
+  const toggle = document.querySelector('.dropdown-toggle');
+  
+  if (!dropdown || !content || !toggle) return;
+
+  const items = Array.from(content.querySelectorAll('a'));
+  const activeElement = document.activeElement;
+  const currentIndex = items.indexOf(activeElement);
+
+  if (e.key === 'Escape') {
+    content.style.display = 'none';
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.focus();
+  }
+
+  if (content.style.display === 'grid') {
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      const nextIndex = (currentIndex + 1) % items.length;
+      items[nextIndex].focus();
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      const prevIndex = (currentIndex - 1 + items.length) % items.length;
+      items[prevIndex].focus();
+    }
+  }
+});
+
 // Suporte para fechar o dropdown ao clicar fora dele
 window.onclick = function(event) {
   if (!event.target.matches('.dropdown-toggle')) {
@@ -125,7 +156,9 @@ document.addEventListener('DOMContentLoaded', function() {
     dropdownToggle.addEventListener('click', function(e) {
       e.preventDefault();
       const isVisible = dropdownContent.style.display === 'grid';
-      dropdownContent.style.display = isVisible ? 'none' : 'grid';
+      const newState = !isVisible;
+      dropdownContent.style.display = newState ? 'grid' : 'none';
+      dropdownToggle.setAttribute('aria-expanded', newState);
     });
   }
 });

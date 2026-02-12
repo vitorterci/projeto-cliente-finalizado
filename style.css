@@ -498,7 +498,6 @@ code {
 /* Tabs */
 .tabs {
   display: flex;
-  margin-bottom: -1px;
   border-bottom: 1px solid var(--accent-color);
 }
 
@@ -644,6 +643,7 @@ code {
 .barra-lateral:not(.expandida) .cartao::before {
   display: none;
 }
+
 /* Menu Dropdown para Linguagens */
 .dropdown {
   position: relative;
@@ -653,37 +653,56 @@ code {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #2a2a2a;
-  min-width: 450px; /* Aumentado para acomodar 3 colunas */
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  background-color: #1e1e1e;
+  min-width: 500px;
+  box-shadow: 0px 10px 30px rgba(0,0,0,0.5);
   z-index: 1001;
-  border-radius: 10px;
-  top: 100%;
+  border-radius: 12px;
+  top: calc(100% + 10px);
   left: 50%;
-  transform: translateX(-50%); /* Centraliza o dropdown em relação ao botão */
-  padding: 15px;
-  grid-template-columns: repeat(3, 1fr); /* Define 3 colunas iguais */
-  gap: 5px;
+  transform: translateX(-50%);
+  padding: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+.dropdown:hover .dropdown-content {
+  display: grid;
 }
 
-.dropdown:hover .dropdown-content {
-  display: grid; /* Muda de block para grid ao mostrar */
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  gap: 12px;
+}
+
+.dropdown-item:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.dropdown-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  background: transparent;
+  border-radius: 4px;
 }
 
 .dropdown-content a {
-  color: white;
-  padding: 12px 16px;
+  color: #e0e0e0;
   text-decoration: none;
   display: block;
-  transition: background-color 0.3s;
+  font-size: 0.95rem;
+  font-weight: 500;
+  white-space: nowrap;
 }
 
 .dropdown-content a:hover {
-  background-color: var(--accent-color);
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
+  color: var(--accent-color);
 }
 
 .dropdown-toggle::after {
